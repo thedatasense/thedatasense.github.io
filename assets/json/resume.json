@@ -25,17 +25,13 @@
       "name": "Medtronic",
       "position": "Senior Principal Research and Development Engineer & Technical Fellow",
       "url": "https://www.medtronic.com",
-      "startDate": "your-start-date",
-      "endDate": "present",
-      "summary": "Focusing on data analytics, machine learning, and cloud technologies to enhance healthcare solutions in minimally invasive therapies and precision oncology.",
+      "summary": "Focusing on data analytics, machine learning, and cloud technologies to enhance healthcare solutions in minimally invasive therapies.",
       "highlights": ["Lead technical teams", "Develop innovative healthcare solutions"]
     },
     {
       "name": "University of New Haven - SAIL Lab",
       "position": "Ph.D. Student",
       "url": "https://sail-lab.org/",
-      "startDate": "your-start-date",
-      "endDate": "expected-graduation-date",
       "summary": "Research in AI applications for healthcare, particularly using reinforcement learning for precision oncology.",
       "highlights": ["Advanced methodologies for personalized cancer treatment", "Deep learning for dose estimation"]
     }
@@ -46,9 +42,8 @@
       "location": "Connecticut, US",
       "url": "https://www.uconn.edu/",
       "area": "Data Science",
-      "studyType": "Master",
-      "startDate": "your-start-date",
-      "endDate": "your-end-date",
+      "studyType": "Masters in Data Science",
+      "endDate": "December 2019",
       "courses": ["Data Analytics", "Machine Learning"]
     }
   ],
@@ -80,8 +75,7 @@
     {
       "name": "Precision Oncology Research",
       "summary": "Developing methodologies for personalized cancer treatment using AI and machine learning.",
-      "startDate": "your-start-date",
-      "endDate": "present",
+      "startDate": "January 2023",
       "url": "https://sail-lab.org/rushmore_teams/binesh-kumar/"
     }
   ]

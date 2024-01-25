@@ -1,26 +1,29 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: Ph.D Student at University of New Haven, Senior Principal Research Engineer & Technical Fellow at Medtronic, Surgical.
+subtitle: Ph.D. Student at University of New Haven | Senior Principal Research Engineer & Technical Fellow at Medtronic
 
 profile:
   align: right
   image: prof_pic_1.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>SAIL Lab</p>
-    <p>University of New Haven</p>
-    <p>New Haven, CT</p>
+    <address>
+      <p><strong>SAIL Lab</strong></p>
+      <p>University of New Haven</p>
+      <p>New Haven, CT</p>
+    </address>
 
-news: false # includes a list of news items
-latest_posts: false # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+news: false
+latest_posts: false
+selected_papers: false
+social: false
 ---
 
-I am Binesh Kumar, a dynamic and experienced professional with over 15 years in the field of data science and healthcare technology. Currently, I hold the position of Senior Principal Research and Development Engineer & Technical Fellow at Medtronic. My expertise lies in enhancing healthcare solutions through innovative technologies, particularly in the realms of minimally invasive therapies and precision oncology.
+<h2>Welcome</h2>
+<p>I am <strong>Binesh Kumar</strong>, an experienced professional with a 15-year track record in data science and healthcare technology. At <strong>Medtronic</strong>, I serve as a Senior Principal Research and Development Engineer & Technical Fellow, focusing on advancing healthcare solutions, especially in minimally invasive therapies and precision oncology.</p>
 
-Academically, I am a Ph.D. Candidate at the Secure and Assured Intelligent Learning Lab (SAIL Lab), University of New Haven, focusing on dynamic treatment planning systems for precision oncology using Reinforcement Learning Techniques. My goal is to create equitable healthcare solutions across the globe.
+<p>In academia, I'm pursuing my <strong>Ph.D. at the Secure and Assured Intelligent Learning Lab (SAIL Lab)</strong>, University of New Haven. My research is dedicated to developing dynamic treatment planning systems in precision oncology, utilizing Reinforcement Learning Techniques. My overarching aim is to contribute to creating equitable healthcare solutions globally.</p>
 
-Passionate about bridging the gap between data and actionable insights in healthcare, I am always eager to engage in collaborations and discussions that drive innovation in medical care.
+<p>With a deep passion for marrying data with actionable insights in healthcare, I actively seek collaborative opportunities and discussions that propel innovation in medical care. Let's connect to explore possibilities in this exciting field.</p>
