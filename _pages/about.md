@@ -21,9 +21,9 @@ selected_papers: false
 social: false
 ---
 
-<h2>Welcome</h2>
-<p>I am <strong>Binesh Kumar</strong>, an experienced professional with a 15-year track record in data science and healthcare technology. At <strong>Medtronic</strong>, I serve as a Senior Principal Research and Development Engineer & Technical Fellow, focusing on advancing healthcare solutions, especially in minimally invasive therapies and precision oncology.</p>
 
-<p>In academia, I'm pursuing my <strong>Ph.D. at the Secure and Assured Intelligent Learning Lab (SAIL Lab)</strong>, University of New Haven. My research is dedicated to developing dynamic treatment planning systems in precision oncology, utilizing Reinforcement Learning Techniques. My overarching aim is to contribute to creating equitable healthcare solutions globally.</p>
+<p>Hello, I'm <strong>Binesh Kumar</strong>, bringing over 15 years of experience in data science and healthcare technology to my role at <strong>Medtronic</strong>. As a Senior Principal Research and Development Engineer & Technical Fellow, my focus lies in crafting innovative solutions for laparoscopic and robotic surgical procedures, with a special emphasis on product data management.</p>
 
-<p>With a deep passion for marrying data with actionable insights in healthcare, I actively seek collaborative opportunities and discussions that propel innovation in medical care. Let's connect to explore possibilities in this exciting field.</p>
+<p>Academically, as a Ph.D. candidate at the <strong>Secure and Assured Intelligent Learning Lab (SAIL Lab)</strong> at the University of New Haven, I am committed to advancing precision oncology through my research in dynamic treatment planning systems, leveraging the potential of Reinforcement Learning Techniques. My goal is to drive the creation of globally accessible and equitable healthcare solutions.</p>
+
+<p>Driven by a passion to transform healthcare data into meaningful and actionable insights, I am always open to collaborations and discussions that fuel medical innovation. Let's connect to discuss and explore new frontiers in this vital and exciting domain.</p>
