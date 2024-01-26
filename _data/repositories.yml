@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - thedatasense
+
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - UNHSAILLab/rl_for_theranostics
+  - UNHSAILLab/Fault-Detection-on-Surgical-Stapler-

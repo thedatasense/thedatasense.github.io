@@ -1,18 +1,53 @@
 ---
 layout: page
-title: Project 1 - Advanced Fault Detection in Medical Devices
-description: Exploring the integration of complex electronics in medical devices and the application of Fault Detection and Prediction algorithms.
-img: assets/img/3.jpg
+title: Advanced Fault Detection in Medical Devices
+description: Comparative Study of Generative Models for Early Detection of Failures in Medical Devices
+img: assets/img/1.jpg
 importance: 1
-category: work
-giscus_comments: true
+category: research
+giscus_comments: false
 ---
 
-<h2>Project Overview</h2>
+<p>Fault diagnosis is a seasoned field of research, and many critical medical devices maintain an embedded expert system  to self diagnose Increasing complexity of the devices and the variability in  the operating environment results in failures which are often hard to predict and prevent by expert systems Majority of medical devices embed intricate electro-mechanical components with varying properties where failure is not linear The increasing complexity of medical devices, particularly in their electronics and software components, presents significant challenges in terms of safety, reliability, and efficacy.Given the increasing complexity of medical devices and the rising incidence of device-related failures and recalls, there is a pressing need to develop and implement advanced generative methods for more effective and reliable fault detection in these devices</p>
+<div class="row">
+    <!-- Include images related to the project -->
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/fda-medical-failures.jpg" title="Medical Device Electronics" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div>
+Source: FDA MAUDE Database (Retrieved 9th January 2024)
+</div>
 
-<p>“Project 2” delves into the rapidly evolving field of medical devices, focusing on the use of sophisticated electronics like microchips and FPGAs to improve the safety and performance of life-saving equipment. This project explores the complexities and challenges of these electro-mechanical systems, particularly in terms of failure modes that are difficult to detect with traditional testing methods.</p>
 
-<p>The study investigates predictive and preventive maintenance strategies in medical devices, emphasizing fault detection techniques that utilize data, signal, process, or knowledge-based methods. These innovative techniques are critical for preempting failures that could lead to safety concerns or compromised device performance.</p>
+<p>The study investigated predictive and preventive maintenance strategies in medical devices, emphasizing fault detection techniques that utilize data, signal, process, or knowledge-based methods. These innovative techniques are critical for preempting failures that could lead to safety concerns or compromised device performance.</p>
+
+
+
+<h3>Research Scope</h3>
+<p>The core of our research involves a comprehensive survey of state-of-the-art Fault Detection and Prediction algorithms. We aim to assess their feasibility and potential application in the medical device sector, thereby contributing to the development of safer and more reliable medical equipment.</p>
+
+<p>
+As a part of this study we analyzed two generative algorithms (GAN, VAE) and one classic (HMM) for their effectiveness in fault detection.
+We also evaluated the applicability against
+1. Real world Surgical device sensor data
+2.Airbus anomaly detection as benchmark dataset
+
+</p>
+
+<h3>Research Hypothesis</h3>
+<p>
+The potential of Generative Adversarial Networks (GANs) is being harnessed to create Data-Driven Digital Twins (DDT), where deep learning models build digital versions of physical assets from sensor data. These DDTs, when incorporated into Prognostic and Health Monitoring frameworks, learn from normal operation data, bypassing the need for historical failure records. </p> 
+<div class="row">
+    <!-- Include images related to the project -->
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/ddt-fault-detection.jpg" title="Medical Device Electronics" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+<p>They excel in detecting early-stage faults, discerning between different types of failure modes, and monitoring the deterioration of assets across various operating conditions. Moreover, they can automatically produce health indicators, significantly enhancing the efficiency of predictive maintenance scheduling.
+</p>
+
 
 <h3>Team Members</h3>
 <ul>
@@ -21,47 +56,7 @@ giscus_comments: true
   <li>Advisor: Dr. Vahid Behzadan</li>
 </ul>
 
-<h3>Research Scope</h3>
-<p>The core of our research involves a comprehensive survey of state-of-the-art Fault Detection and Prediction algorithms. We aim to assess their feasibility and potential application in the medical device sector, thereby contributing to the development of safer and more reliable medical equipment.</p>
-
-<div class="row">
-    <!-- Include images related to the project -->
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/related_image_1.jpg" title="Medical Device Electronics" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/related_image_2.jpg" title="Fault Detection Research" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Top: Advanced electronics in medical devices. Bottom: Research on Fault Detection.
-</div>
-
-<!-- Additional project details or images can be included here -->
 
 <h3>Publications</h3>
-<p>In preparation: Sadanandan, B., Arghavani Nobar, B., Behzadan, V. (2023). “Analysis of Fault Detection in Medical Devices Leveraging Generative Machine Learning Methods.”</p>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
-s
-
+<p>Submitted: Sadanandan, B., Arghavani Nobar, B., Behzadan, V. (2023). “Analysis of Fault Detection in Medical Devices Leveraging Generative Machine Learning Methods.”</p>
 

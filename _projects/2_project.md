@@ -1,81 +1,54 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Data-Driven Modeling and Decision Support for Precision Oncology
+description: A dynamic treatment planning system for Theranostics
+img: assets/img/1.jpg
 importance: 2
-category: work
-giscus_comments: true
+category: research
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
+<p>Precision oncology demonstrates the evolution of cancer therapy, emphasizing personalized treatment plans. This approach strategically targets genetic alterations to enhance patient survival with treatments tailored to individual genetic profiles.</p>
 <div class="row">
+    <!-- Include images related to the project -->
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/graphic-estimated-number-of-deaths-from-2020-to-2040-both-sexes-age-0-85-all-cancers.png" title="Cancer Deaths" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+<p>The scope encompasses a comprehensive analysis of patient-specific genetic patterns and their alignment with an extensive knowledge base of therapeutic and clinical trial data. The research investigates the longitudinal nature of treatment regimens, which adapt to evolving patient health markers and treatment responses.</p>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
+<h3>Research Scope</h3>
+<p>Our research examines advanced pharmacokinetic models and the integration of Reinforcement Learning (RL) techniques. We focus on two main areas: developing a data-driven Physiology-Based PharmacoKinetic (PBPK) model for individualized therapy predictions and exploring the application of RL for dynamic treatment optimization. This approach allows us to precisely model and forecast the pharmacokinetics of theranostics agents, leading to more effective, patient-specific treatment strategies.
+.</p>
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+<p>
+As a part of this study we analyzed two generative algorithms (GAN, VAE) and one classic (HMM) for their effectiveness in fault detection.
+We also evaluated the applicability against
+1. Real world Surgical device sensor data
+2.Airbus anomaly detection as benchmark dataset
 
-{% endraw %}
+</p>
+
+<h3>Research Hypothesis</h3>
+<p>
+We hypothesize that integrating data-driven PBPK modeling with RL-based decision support systems can significantly improve the precision and efficacy of cancer treatments. By personalizing therapy regimens and optimizing dosing strategies, we aim to enhance treatment outcomes, reduce toxicities, and offer a more targeted approach to cancer therapy. Our project seeks to validate this hypothesis through rigorous data analysis, model development, and clinical simulations.. </p> 
+
+
+<p>They excel in detecting early-stage faults, discerning between different types of failure modes, and monitoring the deterioration of assets across various operating conditions. Moreover, they can automatically produce health indicators, significantly enhancing the efficiency of predictive maintenance scheduling.
+</p>
+
+
+<h3>Team Members</h3>
+<ul>
+  <li>Binesh Kumar</li>
+  <li>Advisor: Dr. Vahid Behzadan</li>
+</ul>
+
+
+<h3>Publications</h3>
+<p>Under Review: Sadanandan B., Behzadan, V. (2024). “Promise of Data-Driven Modeling and Decision
+Support for Precision Oncology and Theranostics”</p>
+
