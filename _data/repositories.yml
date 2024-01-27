@@ -5,3 +5,4 @@ github_users:
 github_repos:
   - UNHSAILLab/rl_for_theranostics
   - UNHSAILLab/Fault-Detection-on-Surgical-Stapler-
+  - thedatasense/lapse-predictor-shiny-app
