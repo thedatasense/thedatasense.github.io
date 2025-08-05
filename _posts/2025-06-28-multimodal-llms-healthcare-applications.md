@@ -69,14 +69,14 @@ Multimodal models let us ask questions about images and get text answers. Here a
 
 - **Architecture**  
   - Decoder-only transformer (Gemma 3 base) with 4 B parameters  
-  - SigLIP image encoder pre-trained on de-identified chest X rays, dermatology, ophthalmology, histopathology :contentReference[oaicite:0]{index=0}  
+  - SigLIP image encoder pre-trained on de-identified chest X rays, dermatology, ophthalmology, histopathology  
 - **Inputs and outputs**  
   - Up to 128 K text tokens plus images (896 × 896 px, 256 tokens each)  
-  - Generates text: reports, answers, summaries :contentReference[oaicite:1]{index=1}  
+  - Generates text: reports, answers, summaries  
 - **Technical specs**  
   - Context length: at least 128 K tokens  
   - Attention: grouped-query attention  
-  - Release: July 9, 2025 (v1.0.1) :contentReference[oaicite:2]{index=2}  
+  - Release: July 9, 2025 (v1.0.1)  
 - **Key performance**  
 
   | Task                           | Base Gemma 3 4B | MedGemma 4B-IT |
@@ -86,10 +86,10 @@ Multimodal models let us ask questions about images and get text answers. Here a
   | CXR14 macro F1 (3 conds)       | 32.0            | 50.1           |
   | SLAKE VQA token F1              | 40.2            | 72.3           |
   | PathMCQA histopath accuracy     | 37.1            | 69.8           |
-  | EyePACS fundus accuracy         | 14.4            | 64.9           | :contentReference[oaicite:3]{index=3}  
+  | EyePACS fundus accuracy         | 14.4            | 64.9           |  
 - **Availability**  
   - Hosted on Hugging Face under Health AI Developer Foundations license  
-  - Quick-start and fine-tuning notebooks on GitHub :contentReference[oaicite:4]{index=4}  
+  - Quick-start and fine-tuning notebooks on GitHub  
 
 ---
 
@@ -153,4 +153,3 @@ Safe clinical use requires:
 4. **Unified benchmarks**: cover performance, safety, fairness  
 
 Multimodal LLMs can revolutionize healthcare, but careful validation and deployment are key to patient safety and trust.
-::contentReference[oaicite:5]{index=5}
