@@ -10,7 +10,6 @@ giscus_comments: false
 
 <p>As medical institutions increasingly adopt Vision-Language Models (VLMs) for clinical decision support, understanding and mitigating their security vulnerabilities becomes critical. This research introduces VSF-Med, a comprehensive vulnerability scoring framework designed specifically for evaluating the robustness of medical AI systems against adversarial attacks.</p>
 
-
 <p>The framework addresses the unique challenges posed by the integration of visual and textual modalities in medical AI, where subtle manipulations can lead to potentially dangerous misdiagnoses or inappropriate treatment recommendations.</p>
 
 <h3>Research Scope</h3>

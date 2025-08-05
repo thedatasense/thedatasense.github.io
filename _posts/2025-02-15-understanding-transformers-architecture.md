@@ -12,6 +12,7 @@ Originally introduced in "Attention is All You Need" by Vaswani et al., the tran
 ## High-Level Overview
 
 The transformer architecture consists of two main components:
+
 - **Encoder**: Processes the input text and encodes it into contextual vectors
 - **Decoder**: Takes these encoded vectors and generates the output text
 
@@ -20,6 +21,7 @@ Both encoder and decoder use layers of self-attention mechanisms that allow the 
 ### Why Transformers?
 
 Unlike RNNs and LSTMs that process sequences one word/token at a time, transformers process entire sequences at once. This parallel processing capability offers several advantages:
+
 - Eliminates sequential dependencies that hinder parallelization
 - Better captures long-term dependencies in sequences
 - Significantly improves training time
@@ -29,18 +31,22 @@ Unlike RNNs and LSTMs that process sequences one word/token at a time, transform
 The encoder is a stack of multiple identical layers (6 in the original transformer paper). Each layer consists of:
 
 ### 1. Multi-Headed Self-Attention
+
 The encoder processes the input sequence using self-attention, where each token attends to every other token. This captures dependencies between words, regardless of their position in the sequence. Input tokens are represented as embeddings, added to positional encodings to retain order information.
 
 ### 2. Add & Norm Layers
+
 - **Add**: A residual connection where the input to a sublayer is added back to its output
 - **Norm**: Layer normalization that ensures consistent scale of inputs across layers
 
 These components help stabilize training by avoiding the vanishing gradient problem and allow the model to learn identity mappings when needed.
 
 ### 3. Feedforward Neural Network
+
 A fully connected layer that processes the output of the attention mechanism to refine token representations.
 
 ### 4. Residual Connections and Layer Normalization
+
 These stabilize training by passing the input of each layer forward along with the processed output.
 
 ## The Decoder
@@ -48,16 +54,20 @@ These stabilize training by passing the input of each layer forward along with t
 The decoder is also a stack of identical layers, but each layer has three key components:
 
 ### 1. Masked Multi-Headed Self-Attention
+
 The decoder attends to its own previous outputs, but masking is applied to prevent attending to future tokens (maintaining causality during generation).
 
 ### 2. Cross-Attention
+
 This is where the decoder attends to the encoder's output representations. At each decoding step, the decoder uses:
+
 - Encoder's output as key-value pairs
 - Its own hidden state as the query
 
 This allows the decoder to focus on relevant parts of the input sentence for the current output token.
 
 ### 3. Feedforward Layer
+
 Like the encoder, a fully connected layer refines the decoder's representations.
 
 ## The Attention Mechanism
@@ -73,6 +83,7 @@ Like the encoder, a fully connected layer refines the decoder's representations.
 ### Steps in Self-Attention
 
 1. **Compute Q, K, and V**: Multiply the input matrix $$X$$ by weight matrices $$W_X$$, $$W_Y$$, and $$W_Z$$. Each token $$x_i$$ is associated with:
+
    - $$q_i$$: Seeks relevant information
    - $$k_i$$: Provides relevance clues
    - $$v_i$$: Contains semantic information
@@ -97,6 +108,7 @@ The attention mechanism for all tokens can be expressed as:
 $$G = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}} + M\right) V$$
 
 Where:
+
 - $$Q, K, V$$: Query, key, and value matrices
 - $$M$$: Causal mask
 
@@ -107,6 +119,7 @@ Byte Pair Encoding is a subword tokenization algorithm widely used in transforme
 ### Why BPE?
 
 Traditional tokenization algorithms in NLP:
+
 - Lack computational efficiency
 - Fail to represent unseen words effectively
 
@@ -127,4 +140,4 @@ The transformer architecture's innovative use of attention mechanisms has made i
 
 ## References
 
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. *Advances in neural information processing systems*, 30.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. _Advances in neural information processing systems_, 30.

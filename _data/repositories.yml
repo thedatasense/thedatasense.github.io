@@ -1,7 +1,6 @@
 github_users:
   - thedatasense
 
-
 github_repos:
   - UNHSAILLab/rl_for_theranostics
   - UNHSAILLab/Fault-Detection-on-Surgical-Stapler-

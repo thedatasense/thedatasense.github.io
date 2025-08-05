@@ -18,8 +18,6 @@ giscus_comments: false
 
 <p>The scope encompasses a comprehensive analysis of patient-specific genetic patterns and their alignment with an extensive knowledge base of therapeutic and clinical trial data. The research investigates the longitudinal nature of treatment regimens, which adapt to evolving patient health markers and treatment responses.</p>
 
-
-
 <h3>Research Scope</h3>
 <p>The scope includes a thorough analysis using the LIMRA Universal Life Dataset to examine lapse trends, supplemented by predictive modeling to forecast lapse probabilities. Additionally, the project will gather insights directly from millennials through surveys and interviews, focusing on their perceptions and experiences with life insurance. The outcome will be strategic recommendations for insurance companies to improve their engagement with the millennial market, aiming to reduce lapse rates and foster long-term customer loyalty.
 </p>
@@ -33,8 +31,7 @@ giscus_comments: false
 
 <h3>Research Hypothesis</h3>
 <p>
-The hypothesis suggests that the higher lapse rates in millennials stem from a blend of insufficient understanding of life insurance, a complex purchasing process, and a mismatch between policy offerings and millennials' needs. This project hypothesizes that addressing these factors will significantly reduce lapse rates, enhancing customer retention and stability among millennial policyholders. </p> 
-
+The hypothesis suggests that the higher lapse rates in millennials stem from a blend of insufficient understanding of life insurance, a complex purchasing process, and a mismatch between policy offerings and millennials' needs. This project hypothesizes that addressing these factors will significantly reduce lapse rates, enhancing customer retention and stability among millennial policyholders. </p>
 
 <h3>Team Members</h3>
 <ul>

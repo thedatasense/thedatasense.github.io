@@ -16,6 +16,7 @@ MLLMGuard evaluates models across five crucial safety dimensions, each addressin
 ### 1. Privacy
 
 The framework tests models' awareness of privacy-infringing requests, including:
+
 - Personal information exposure
 - Trade secrets
 - State-sensitive information
@@ -25,6 +26,7 @@ The framework tests models' awareness of privacy-infringing requests, including:
 ### 2. Bias
 
 This dimension examines how models handle:
+
 - Stereotypes and prejudice
 - Discriminatory language
 - Biased content in prompts
@@ -34,6 +36,7 @@ This dimension examines how models handle:
 ### 3. Toxicity
 
 The framework assesses models' ability to:
+
 - Recognize hate speech, pornography, and violence
 - Generate safe, responsible responses to toxic inputs
 - Handle harmful content appropriately
@@ -43,6 +46,7 @@ The framework assesses models' ability to:
 ### 4. Truthfulness
 
 This crucial dimension checks for:
+
 - Hallucinations (false claims about image content)
 - Robustness against adversarial attacks
 - Consistency in responses
@@ -52,6 +56,7 @@ This crucial dimension checks for:
 ### 5. Legality
 
 The framework tests understanding of:
+
 - Legal boundaries in content generation
 - Personal safety considerations
 - Public security implications
@@ -69,6 +74,7 @@ The framework tests understanding of:
 ### Red Teaming Techniques
 
 The dataset incorporates sophisticated attack methods:
+
 - Disguised prompts
 - Noise injection
 - Novel techniques like "Reverse Lubetion" and "Harmful Scenario"
@@ -76,6 +82,7 @@ The dataset incorporates sophisticated attack methods:
 ## GuardRank: The Automated Evaluator
 
 MLLMGuard introduces GuardRank, a lightweight evaluation tool that:
+
 - Replaces expensive GPT-4 and human annotators
 - Uses LLaMA-2 and RoBERTa-Large for scoring
 - Achieves 78.5% accuracy (significantly outperforming GPT-4's 42.78%)
@@ -85,19 +92,22 @@ MLLMGuard introduces GuardRank, a lightweight evaluation tool that:
 ### Models Tested
 
 The framework evaluated 13 MLLMs, including:
+
 - Commercial models: GPT-4V, Gemini
 - Open-source models: LLaVA, MiniGPT-v2
 
 ### Key Findings
 
 1. **Safety Gaps**: Most models struggle with privacy, bias, and legality dimensions
+
    - Only GPT-4V and MiniGPT-v2 achieved low Attack Success Degree (ASD) scores
 
-2. **Truthfulness Issues**: 
+2. **Truthfulness Issues**:
+
    - Hallucinations and position bias are widespread
    - Models like LLaVA-v1.5-7B frequently fail to recognize non-existent entities
 
-3. **Scaling Laws Don't Apply to Safety**: 
+3. **Scaling Laws Don't Apply to Safety**:
    - Larger models (e.g., Yi-VL-34B) don't necessarily improve safety
    - Alignment quality matters more than model size
 
@@ -106,6 +116,7 @@ The framework evaluated 13 MLLMs, including:
 ### Practical Applications
 
 MLLMGuard provides standardized safety auditing for:
+
 - Social media content moderation
 - Legal advisory systems
 - Healthcare applications
@@ -114,6 +125,7 @@ MLLMGuard provides standardized safety auditing for:
 ### Cultural Relevance
 
 The inclusion of Chinese data highlights the critical need for:
+
 - Multicultural safety evaluations
 - Diverse dataset representation
 - Cross-cultural understanding in AI systems
@@ -121,6 +133,7 @@ The inclusion of Chinese data highlights the critical need for:
 ### Ethical Considerations
 
 The framework emphasizes the delicate balance between:
+
 - **Honesty**: Providing truthful information
 - **Harmlessness**: Avoiding potentially harmful outputs
 
@@ -143,6 +156,7 @@ Developers must carefully navigate this trade-off to create both truthful and sa
 ## Conclusion
 
 MLLMGuard represents a significant step forward in MLLM safety evaluation. By providing a comprehensive framework across multiple safety dimensions, it enables developers and researchers to:
+
 - Identify critical safety gaps in their models
 - Implement targeted improvements
 - Deploy AI systems more responsibly

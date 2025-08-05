@@ -5,7 +5,9 @@
       "Bash(find:*)",
       "Bash(mkdir:*)",
       "Bash(cat:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(npx prettier:*)",
+      "Bash(npm install)"
     ],
     "deny": []
   }

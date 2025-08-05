@@ -19,10 +19,7 @@ giscus_comments: false
 Source: FDA MAUDE Database (Retrieved 9th January 2024)
 </div>
 
-
 <p>The study investigated predictive and preventive maintenance strategies in medical devices, emphasizing fault detection techniques that utilize data, signal, process, or knowledge-based methods. These innovative techniques are critical for preempting failures that could lead to safety concerns or compromised device performance.</p>
-
-
 
 <h3>Research Scope</h3>
 <p>The core of our research involves a comprehensive survey of state-of-the-art Fault Detection and Prediction algorithms. We aim to assess their feasibility and potential application in the medical device sector, thereby contributing to the development of safer and more reliable medical equipment.</p>
@@ -48,7 +45,6 @@ The potential of Generative Adversarial Networks (GANs) is being harnessed to cr
 <p>They excel in detecting early-stage faults, discerning between different types of failure modes, and monitoring the deterioration of assets across various operating conditions. Moreover, they can automatically produce health indicators, significantly enhancing the efficiency of predictive maintenance scheduling.
 </p>
 
-
 <h3>Team Members</h3>
 <ul>
   <li>Binesh Kumar</li>
@@ -56,7 +52,5 @@ The potential of Generative Adversarial Networks (GANs) is being harnessed to cr
   <li>Advisor: Dr. Vahid Behzadan</li>
 </ul>
 
-
 <h3>Publications</h3>
 <p>Submitted: Sadanandan, B., Arghavani Nobar, B., Behzadan, V. (2023). “Analysis of Fault Detection in Medical Devices Leveraging Generative Machine Learning Methods.”</p>
-

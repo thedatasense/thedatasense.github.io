@@ -18,8 +18,6 @@ giscus_comments: false
 
 <p>The scope encompasses a comprehensive analysis of patient-specific genetic patterns and their alignment with an extensive knowledge base of therapeutic and clinical trial data. The research investigates the longitudinal nature of treatment regimens, which adapt to evolving patient health markers and treatment responses.</p>
 
-
-
 <h3>Research Scope</h3>
 <p>Our research examines advanced pharmacokinetic models and the integration of Reinforcement Learning (RL) techniques. We focus on two main areas: developing a data-driven Physiology-Based PharmacoKinetic (PBPK) model for individualized therapy predictions and exploring the application of RL for dynamic treatment optimization. This approach allows us to precisely model and forecast the pharmacokinetics of theranostics agents, leading to more effective, patient-specific treatment strategies.
 .</p>
@@ -34,12 +32,10 @@ We also evaluated the applicability against
 
 <h3>Research Hypothesis</h3>
 <p>
-We hypothesize that integrating data-driven PBPK modeling with RL-based decision support systems can significantly improve the precision and efficacy of cancer treatments. By personalizing therapy regimens and optimizing dosing strategies, we aim to enhance treatment outcomes, reduce toxicities, and offer a more targeted approach to cancer therapy. Our project seeks to validate this hypothesis through rigorous data analysis, model development, and clinical simulations.. </p> 
-
+We hypothesize that integrating data-driven PBPK modeling with RL-based decision support systems can significantly improve the precision and efficacy of cancer treatments. By personalizing therapy regimens and optimizing dosing strategies, we aim to enhance treatment outcomes, reduce toxicities, and offer a more targeted approach to cancer therapy. Our project seeks to validate this hypothesis through rigorous data analysis, model development, and clinical simulations.. </p>
 
 <p>They excel in detecting early-stage faults, discerning between different types of failure modes, and monitoring the deterioration of assets across various operating conditions. Moreover, they can automatically produce health indicators, significantly enhancing the efficiency of predictive maintenance scheduling.
 </p>
-
 
 <h3>Team Members</h3>
 <ul>
@@ -47,8 +43,6 @@ We hypothesize that integrating data-driven PBPK modeling with RL-based decision
   <li>Advisor: Dr. Vahid Behzadan</li>
 </ul>
 
-
 <h3>Publications</h3>
 <p>Under Review: Sadanandan B., Behzadan, V. (2024). “Promise of Data-Driven Modeling and Decision
 Support for Precision Oncology and Theranostics”</p>
-
