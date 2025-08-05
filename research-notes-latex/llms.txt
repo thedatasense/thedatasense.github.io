@@ -1,0 +1,406 @@
+\section{Large Lanugage Modlels}
+Creating a chat LM, capable of handling dialogue and following complex instructions, typically involves two main stages. First, the model is pretrained on a massive dataset that often contain trillions of tokens. Then, the model undergoes supervised finetuning to align its behavior with user instructions. 
+
+\subsection{Pretraining on Massive Datasets}
+Pretraining is the phase in which the model learns to predict the next token based on the input context.  The  goal is to minimize cross-entropy loss, hoping that deeper contextual “understanding” emerges as a side effect. Modern LMs emply transformer architectures with bigger embedding dimensions (\texttt{emb\_dim}) and multiple stacked decoder blocks (\texttt{num\_blocks}). As these increase,  the model’s capacity to handle complex patterns across text increases as well. 
+
+\subsubsection{Number of Parameters}
+A toy decoder model might have only a few million parameters, state-of-the-art systems often push into the hundreds of billions or even trillions range. 
+In a transformer, these parameters are spread across embeddings, multi-head self-attention modules, and MLP layers. Doubling the embedding dimension typically quadruples the parameter count in the attention and MLP components, and increasing the number of blocks simply multiplies that total. 
+
+\subsubsection{Context Window}
+Modern LLMs are also capable of handling  larger contexts GPT-3, for example, can manage 2,048 tokens. Some next-gen LLMs can handle 128,000 tokens or more—enough to encompass an entire novel in a single pass.
+
+However, the self-attention mechanism’s scaling remains a bottleneck. If the sequence length is \(n\), self-attention computations scale on the order of \(O(n^2)\). That means doubling the sequence length quadruples the memory usage and compute cost. For extremely long inputs, like 10,000 tokens or more, the overall complexity becomes enormous, requiring billions of attention operations.
+
+\subsection{ Pretraining}
+It’s worth noting that in the pretraining stage, the model is not exactly “trained” to follow instructions. Instead, it's trained to keep going with the text—whatever that text might be. If you give a pretrained model a question, it might just rattle off some partially relevant or random continuation and that could be useless. 
+
+\subsection{Supervised Finetuning for Instructions}
+The second phase—supervised finetuning—directly addresses the mismatch between raw language generation and the ability to reliably follow instructions. In this step, the model is trained on high-quality data containing instruction prompts and correct responses. This is where the model becomes capable of properly answering questions, providing step-by-step explanations, or engaging in coherent multi-turn conversations.
+
+During finetuning:
+\begin{itemize}
+    \item The model picks up more instruct-following behaviors, such as being direct, clarifying questions, or politely refusing certain requests.
+    \item The data usually includes pairs of input (e.g., a question) and desired output (a correct or helpful answer).
+    \item This corrects the pretrained “just continue the text” default, so the model can start to act more predictably in interactive settings.
+\end{itemize}
+
+
+\section{Multimodal LLMs - Review of Llama 3.2 Architecture}
+Building upon the foundations of advanced language models, Multimodal LLaMA 3.2 by Meta integrates vision and language capabilities. Let's explore the architecture and design principles that enable Multimodal LLaMA 3.2 to execute vision-language tasks.The architecture is divided into three main components: Vision Encoder, Language Model, and Integration Mechanism.
+
+\subsection*{Vision Encoder}
+\begin{itemize}
+    \item \textbf{Two-stage design:} A 32-layer local encoder processes image patches and preserves intermediate features, while an 8-layer global encoder integrates these features with gated attention mechanisms.
+    \item \textbf{High-resolution input:} Images are divided into a 32×32 grid of patches, each represented as a 1280-dimensional vector.
+    \item \textbf{Intermediate feature preservation:} Outputs from layers 3, 7, 15, 23, and 30 are retained, enabling multi-scale visual understanding.
+\end{itemize}
+
+\subsection*{Language Model}
+\begin{itemize}
+    \item Based on LLaMA 3.1 architecture with 40 transformer layers and a hidden size of 4096.
+    \item Alternates between self-attention and cross-attention layers (every 5th layer).
+    \item Supports multimodal tasks by leveraging cross-attention layers for visual grounding.
+\end{itemize}
+
+\subsection*{Integration Mechanism}
+\begin{itemize}
+    \item \textbf{Projection layer:} Maps 7680-dimensional visual features into a 4096-dimensional space aligned with the language model.
+    \item \textbf{Cross-attention layers:} Strategically placed at regular intervals to integrate visual and textual information.
+    \item \textbf{Gated mechanisms:} Provide fine-grained control over information flow, allowing selective use of visual features.
+\end{itemize}
+
+\subsection*{Architecture Notes}
+\begin{itemize}
+    \item \textbf{Multi-scale understanding:} Preserves access to different levels of visual abstraction.
+    \item \textbf{Controlled integration:} Regular cross-attention checkpoints enable refined multimodal reasoning.
+    \item \textbf{Efficient training:} Freezes language model parameters while focusing on vision encoder and cross-attention layers.
+\end{itemize}
+\section*{Evaluating LLMs}
+
+\subsubsection{Perplexity}
+\begin{definition}
+    
+
+Perplexity is a metric used to evaluate how well a probabilistic language model predicts a sample of text. It quantifies the model's uncertainty or ``perplexity'' in making predictions. A lower perplexity indicates that the model is more confident and better at predicting the text.
+
+\textbf{Mathematical Notation:}  
+Perplexity for a dataset \( \mathcal{D} \) with \( D \) total tokens, using a context window of size \( k \), is defined as:
+
+\[
+\text{Perplexity}(\mathcal{D}, k) = \exp\left( - \frac{1}{D} \sum_{i=1}^{D} \log \Pr(t_i \mid t_{i-k}, t_{i-k+1}, \ldots, t_{i-1}) \right)
+\]
+
+Where:  
+\begin{itemize}
+    \item \( t_i \) is the \( i \)-th token in the dataset.  
+    \item \( \Pr(t_i \mid t_{i-k}, \ldots, t_{i-1}) \) is the probability assigned by the model to \( t_i \) given the preceding \( k \) tokens in the context window.  
+    \item \( \log \) is the natural logarithm.  
+\end{itemize}
+
+\end{definition}
+
+\textbf{Example Calculation:}  
+Consider the example text:  \textit{``AI models are improving significantly.''}
+\textbf{Token Probabilities:}  
+Assume a language model predicts word probabilities as follows (with a context window of 2 words):  
+
+\[
+\begin{aligned}
+&\Pr(\text{AI}) = 0.12, \\
+&\Pr(\text{models} \mid \text{AI}) = 0.15, \\
+&\Pr(\text{are} \mid \text{AI, models}) = 0.25, \\
+&\Pr(\text{improving} \mid \text{models, are}) = 0.20, \\
+&\Pr(\text{significantly} \mid \text{are, improving}) = 0.10.
+\end{aligned}
+\]
+
+\textbf{Negative Log-Likelihood (NLL):}  
+We calculate \( -\log(\Pr(\cdot)) \) for each token:  
+
+\[
+\begin{aligned}
+&-\log(0.12) \approx 2.12, \\
+&-\log(0.15) \approx 1.90, \\
+&-\log(0.25) \approx 1.39, \\
+&-\log(0.20) \approx 1.61, \\
+&-\log(0.10) \approx 2.30.
+\end{aligned}
+\]
+
+\textbf{Average NLL:}  
+Sum and average these values:  
+
+\[
+\text{Average NLL} = \frac{2.12 + 1.90 + 1.39 + 1.61 + 2.30}{5} \approx 1.86.
+\]
+
+\textbf{Perplexity:}  
+Exponentiate the average NLL to compute perplexity:  
+
+\[
+\text{Perplexity} = \exp(1.86) \approx 6.42.
+\]
+
+The model’s perplexity for this text is approximately, meaning it is, on average, as uncertain as choosing from roughly 6.4 equally likely options per word.
+
+
+    \textbf{Why Is Perplexity Important?}
+    
+    \begin{enumerate}
+    \item \textbf{Model Evaluation:} Perplexity provides a single scalar value summarizing how well a model predicts text, making it a standard metric for comparing language models.
+    \item \textbf{Intuitive Interpretation:} Perplexity measures uncertainty, which is relatable to human understanding of ``difficulty'' in making predictions.
+    \item \textbf{Training Guidance:} By tracking perplexity over training epochs, developers can monitor overfitting and underfitting.
+    \item \textbf{Contextual Information:} The inclusion of a context window (\( k \)) helps evaluate how well models use prior tokens, a critical aspect of sequential text modeling.
+\end{enumerate}
+
+\subsubsection{ROUGE (Recall-Oriented Understudy for Gisting Evaluation)}
+\begin{definition}
+    
+
+Perplexity measures how well the model predics a sequence of tokens without any comparison to the ground truth.  Another common technique is ROUGE (Recall-Oriented Understudy for Gisting Evaluation). ROUGE evaluates text quality by measuring overlaps, such as tokens or n-grams, between the generated text and the reference.
+
+\begin{equation}
+\text{Recall} = \frac{\text{Number of matching tokens}}{\text{Total number of tokens in reference texts}}
+\end{equation}
+
+ROUGE-1 is defined as:
+\begin{equation}
+\text{ROUGE-1} = \frac{\sum_{(g, r) \in \mathcal{D}} \sum_{t \in r} \text{count}(t, g)}{\sum_{(g, r) \in \mathcal{D}} \text{length}(r)}
+\end{equation}
+
+Here, $\mathcal{D}$ is the dataset of (generated text, reference text) pairs, $\text{count}(t, g)$ counts how often a token $t$ from the reference text $r$ appears in the generated text $g$, and the denominator is the total token count across all reference texts.
+\end{definition}
+To understand this calculation, consider a simple example:
+\begin{itemize}
+    \item \textbf{Reference text:} The cat sat on the mat near the door.
+    \item \textbf{Generated text:} The cat sat by the door on the mat.
+\end{itemize}
+
+Using word-level tokenization, we calculate:
+\begin{itemize}
+    \item \textbf{Matching words:} the, cat, sat, on, the, mat, door (7 words)
+    \item \textbf{Total words in the reference text:} 9
+    \item \textbf{ROUGE-1:} \(\frac{7}{9} \approx 0.78\)
+\end{itemize}
+
+\section{Accuracy, Calibration and Robustness}
+
+LLMs have found its way in to a wide variety of applications and have demonstrated capabilities in a diverse set of tasks \cite{liang_holistic_2023}.The extensive use cases make the evaluation of these models challenging. To address this, researchers proposed a holistic evaluation of LLMs. A novel framework on this proposed by \cite{liang_holistic_2023}is called Holistic Evaluation of Language Models (HELM), where the evaluation metrics are grouped into three categories.
+
+\subsubsection{Resource requirements or Efficiency}: Efficiency evaluates language models based on training and inference costs, focusing on energy, carbon, and time usage. Training efficiency considers energy consumption, CO2 emissions, and accelerator details, using standardized formulas to estimate metrics when data is unavailable. Inference efficiency is assessed via runtime metrics: (1) denoised inference runtime (removing performance noise) and (2) idealized inference runtime (using standardized hardware and software). These approaches ensure fairer comparisons across models, highlighting efficiency-capability tradeoffs. Transparency from model creators on training and inference details could further enhance holistic evaluations.
+
+\subsubsection{Alignment which includes fairness, bias, stereotypes, and toxicity }
+Fairness in machine learning evaluates disparate treatment and impacts across social groups, particularly in language technologies. Two key approaches are:
+    \begin{enumerate}
+        \item Counterfactual fairness: Tests model behavior on perturbed examples, altering group-related terms (e.g., race or gender) to measure fairness in text classification or question answering.
+        \item Performance disparities: Measures accuracy differences across demographic groups using metadata, revealing bias when group data distributions differ.
+    \end{enumerate}
+Social bias, distinct from fairness, refers to systematic asymmetries in language model generations. It is studied through:
+
+    \begin{enumerate}
+        \item Demographic representation bias: Measures the uneven frequency of mentions for different demographic groups, identifying over-representation or erasure.
+        \item Stereotypical associations: Evaluates how frequently groups are linked to societal stereotypes, such as occupations.
+    \end{enumerate}
+
+The metrics compare the observed frequencies with uniform distributions or alternative references, providing insight into biases in the language models. Addressing such biases is crucial for the development of inclusive and ethical language technology.
+These methods highlight biases in demographic representation and stereotypical associations, advocating fairness as central to evaluation and social equity.
+\subsubsection{Capability which includes accuracy, fairness, and calibration}   They used accuracy as an umbrella term for the standard accuracy-like metric for each scenario. This refers to the accuracy of the exact match in text classification, the F1 score for word overlap in question answering, the MRR and NDCG scores for information retrieval, and the ROUGE score for summarization. It is important to call out the implicit assumption that accuracy is measured and averaged over test instances. In summary, LLM's accuracy should be evaluated using task-specific metrics rather than a single value, as performance varies by task (e.g., question answering, summarization, document categorization). Metrics such as exact match accuracy, ROUGE, or expert review can provide nuanced assessments ranging from objective to subjective. Furthermore, global accuracy averages can obscure variations in performance across specific inputs, highlighting the need for detailed analysis of task-dependent strengths and weaknesses.The HELM framework defines calibration as the ability of a model to be accurate and to express its uncertainty. This is crucial in high-stakes settings where models inform decisions, allowing for human intervention when uncertainty is high. 
+Calibration is distinct from accuracy; even accurate models can be poorly calibrated if they fail to signal low confidence when likely to be wrong. Enhances safety by reducing errors by signaling uncertainty. Calibration can use white-box approaches (evidence strength) or black-box methods (prompting or sampling). Unlike accuracy, calibration metrics are less standardized.
+
+\subsection{Taxonomy of Evaluation for LLMs}
+
+\begin{enumerate}
+    \item Accuracy: Standard accuracy for each task, exact match accuracy for text classification, F1 score Q\&A, MRR and NDCG for information retrieval, ROUGE for summarization. 
+    \item Calibration and Uncertainty: A model is calibrated if it assigns meaningful probabilities to its predictions. To quantify the calibration, we calculate the expected calibration error (ECE), which measures the difference between the predicted probability of the model and the fraction of times the model is correct.
+    \item Robustness: in real-world models, we encounter complexities that we haven't trained or tested against, and to better capture the performance of these models, we need to extend our evaluation. For this, we measure the model's performance against transformed instances in the worst case. There are two main types of transformations: invariance and equivariance. Invariance: we measure the stability of the model's predictions under small semantic-preserving perturbations.  The goal is to understand the model performance under real use cases like typos, misspellings, capitalizations, etc. Example of this transformation using NL Augmenter is [\href{https://github.com/thedatasense/llm-healthcare/blob/main/Appendix%20E%20%3A%20LLM%20Robustness%20NL_Augmenter.ipynb}{here}]. Equivariance: Here we test how semantics altering perturbations influence model behavior, examples of this are listed in \href{https://raw.githubusercontent.com/allenai/contrast-sets/refs/heads/main/BoolQ/boolq_perturbed.json}{Contrast Set repo}
+    \item Fairness : Counterfactual fairness and Statistical fairness are the two widely used metrics\cite{liang_holistic_2023}.By counterfactual fairness, we refer to model behavior on counterfactual data that is generated by perturbing existing test examples. These perturbations correspond either to social groups involving either (i) the speaker who produced the data or (ii) the subject of the text who is mentioned within it.While perturbation-based methods for counterfactual fairness afford both control and scalability (to arbitrary scenarios), which facilitates evaluation across many scenarios, they are limited. Specifically, since the underlying distribution depends on one group’s data (i.e. the group whose data is being perturbed), they fail to reflect unfairness when the data distributions across groups differ in more complex ways. Consequently, we measure performance disparities for scenarios where test instances are annotated with (pre-existing) group-level metadata by reporting how the accuracy on the subset of the test set corresponding to each group
+\end{enumerate}
+
+
+
+
+\section{Large Language Modlels}
+Creating a chat LM, capable of handling dialogue and following complex instructions, typically involves two main stages. First, the model is pretrained on a massive dataset that often contain trillions of tokens. Then, the model undergoes supervised finetuning to align its behavior with user instructions. 
+
+\subsection{Pretraining on Massive Datasets}
+Pretraining is the phase in which the model learns to predict the next token based on the input context.  The  goal is to minimize cross-entropy loss, hoping that deeper contextual “understanding” emerges as a side effect. Modern LMs emply transformer architectures with bigger embedding dimensions (\texttt{emb\_dim}) and multiple stacked decoder blocks (\texttt{num\_blocks}). As these increase,  the model’s capacity to handle complex patterns across text increases as well. 
+
+\subsubsection{Number of Parameters}
+A toy decoder model might have only a few million parameters, state-of-the-art systems often push into the hundreds of billions or even trillions range. 
+In a transformer, these parameters are spread across embeddings, multi-head self-attention modules, and MLP layers. Doubling the embedding dimension typically quadruples the parameter count in the attention and MLP components, and increasing the number of blocks simply multiplies that total. 
+
+\subsubsection{Context Window}
+Modern LLMs are also capable of handling  larger contexts GPT-3, for example, can manage 2,048 tokens. Some next-gen LLMs can handle 128,000 tokens or more—enough to encompass an entire novel in a single pass.
+
+However, the self-attention mechanism’s scaling remains a bottleneck. If the sequence length is \(n\), self-attention computations scale on the order of \(O(n^2)\). That means doubling the sequence length quadruples the memory usage and compute cost. For extremely long inputs, like 10,000 tokens or more, the overall complexity becomes enormous, requiring billions of attention operations.
+
+\subsection{ Pretraining}
+It’s worth noting that in the pretraining stage, the model is not exactly “trained” to follow instructions. Instead, it's trained to keep going with the text—whatever that text might be. If you give a pretrained model a question, it might just rattle off some partially relevant or random continuation and that could be useless. 
+
+\subsection{Supervised Finetuning for Instructions}
+The second phase—supervised finetuning—directly addresses the mismatch between raw language generation and the ability to reliably follow instructions. In this step, the model is trained on high-quality data containing instruction prompts and correct responses. This is where the model becomes capable of properly answering questions, providing step-by-step explanations, or engaging in coherent multi-turn conversations.
+
+During finetuning:
+\begin{itemize}
+    \item The model picks up more instruct-following behaviors, such as being direct, clarifying questions, or politely refusing certain requests.
+    \item The data usually includes pairs of input (e.g., a question) and desired output (a correct or helpful answer).
+    \item This corrects the pretrained “just continue the text” default, so the model can start to act more predictably in interactive settings.
+\end{itemize}
+
+
+\section{Multimodal LLMs - Review of Llama 3.2 Architecture}
+Building upon the foundations of advanced language models, Multimodal LLaMA 3.2 by Meta integrates vision and language capabilities. Let's explore the architecture and design principles that enable Multimodal LLaMA 3.2 to execute vision-language tasks.The architecture is divided into three main components: Vision Encoder, Language Model, and Integration Mechanism.
+
+\subsection*{Vision Encoder}
+\begin{itemize}
+    \item \textbf{Two-stage design:} A 32-layer local encoder processes image patches and preserves intermediate features, while an 8-layer global encoder integrates these features with gated attention mechanisms.
+    \item \textbf{High-resolution input:} Images are divided into a 32×32 grid of patches, each represented as a 1280-dimensional vector.
+    \item \textbf{Intermediate feature preservation:} Outputs from layers 3, 7, 15, 23, and 30 are retained, enabling multi-scale visual understanding.
+\end{itemize}
+
+\subsection*{Language Model}
+\begin{itemize}
+    \item Based on LLaMA 3.1 architecture with 40 transformer layers and a hidden size of 4096.
+    \item Alternates between self-attention and cross-attention layers (every 5th layer).
+    \item Supports multimodal tasks by leveraging cross-attention layers for visual grounding.
+\end{itemize}
+
+\subsection*{Integration Mechanism}
+\begin{itemize}
+    \item \textbf{Projection layer:} Maps 7680-dimensional visual features into a 4096-dimensional space aligned with the language model.
+    \item \textbf{Cross-attention layers:} Strategically placed at regular intervals to integrate visual and textual information.
+    \item \textbf{Gated mechanisms:} Provide fine-grained control over information flow, allowing selective use of visual features.
+\end{itemize}
+
+\subsection*{Architecture Notes}
+\begin{itemize}
+    \item \textbf{Multi-scale understanding:} Preserves access to different levels of visual abstraction.
+    \item \textbf{Controlled integration:} Regular cross-attention checkpoints enable refined multimodal reasoning.
+    \item \textbf{Efficient training:} Freezes language model parameters while focusing on vision encoder and cross-attention layers.
+\end{itemize}
+\section*{Evaluating LLMs}
+
+\subsubsection{Perplexity}
+\begin{definition}
+    
+
+Perplexity is a metric used to evaluate how well a probabilistic language model predicts a sample of text. It quantifies the model's uncertainty or ``perplexity'' in making predictions. A lower perplexity indicates that the model is more confident and better at predicting the text.
+
+\textbf{Mathematical Notation:}  
+Perplexity for a dataset \( \mathcal{D} \) with \( D \) total tokens, using a context window of size \( k \), is defined as:
+
+\[
+\text{Perplexity}(\mathcal{D}, k) = \exp\left( - \frac{1}{D} \sum_{i=1}^{D} \log \Pr(t_i \mid t_{i-k}, t_{i-k+1}, \ldots, t_{i-1}) \right)
+\]
+
+Where:  
+\begin{itemize}
+    \item \( t_i \) is the \( i \)-th token in the dataset.  
+    \item \( \Pr(t_i \mid t_{i-k}, \ldots, t_{i-1}) \) is the probability assigned by the model to \( t_i \) given the preceding \( k \) tokens in the context window.  
+    \item \( \log \) is the natural logarithm.  
+\end{itemize}
+
+\end{definition}
+
+\textbf{Example Calculation:}  
+Consider the example text:  \textit{``AI models are improving significantly.''}
+\textbf{Token Probabilities:}  
+Assume a language model predicts word probabilities as follows (with a context window of 2 words):  
+
+\[
+\begin{aligned}
+&\Pr(\text{AI}) = 0.12, \\
+&\Pr(\text{models} \mid \text{AI}) = 0.15, \\
+&\Pr(\text{are} \mid \text{AI, models}) = 0.25, \\
+&\Pr(\text{improving} \mid \text{models, are}) = 0.20, \\
+&\Pr(\text{significantly} \mid \text{are, improving}) = 0.10.
+\end{aligned}
+\]
+
+\textbf{Negative Log-Likelihood (NLL):}  
+We calculate \( -\log(\Pr(\cdot)) \) for each token:  
+
+\[
+\begin{aligned}
+&-\log(0.12) \approx 2.12, \\
+&-\log(0.15) \approx 1.90, \\
+&-\log(0.25) \approx 1.39, \\
+&-\log(0.20) \approx 1.61, \\
+&-\log(0.10) \approx 2.30.
+\end{aligned}
+\]
+
+\textbf{Average NLL:}  
+Sum and average these values:  
+
+\[
+\text{Average NLL} = \frac{2.12 + 1.90 + 1.39 + 1.61 + 2.30}{5} \approx 1.86.
+\]
+
+\textbf{Perplexity:}  
+Exponentiate the average NLL to compute perplexity:  
+
+\[
+\text{Perplexity} = \exp(1.86) \approx 6.42.
+\]
+
+The model’s perplexity for this text is approximately, meaning it is, on average, as uncertain as choosing from roughly 6.4 equally likely options per word.
+
+
+    \textbf{Why Is Perplexity Important?}
+    
+    \begin{enumerate}
+    \item \textbf{Model Evaluation:} Perplexity provides a single scalar value summarizing how well a model predicts text, making it a standard metric for comparing language models.
+    \item \textbf{Intuitive Interpretation:} Perplexity measures uncertainty, which is relatable to human understanding of ``difficulty'' in making predictions.
+    \item \textbf{Training Guidance:} By tracking perplexity over training epochs, developers can monitor overfitting and underfitting.
+    \item \textbf{Contextual Information:} The inclusion of a context window (\( k \)) helps evaluate how well models use prior tokens, a critical aspect of sequential text modeling.
+\end{enumerate}
+
+\subsubsection{ROUGE (Recall-Oriented Understudy for Gisting Evaluation)}
+\begin{definition}
+    
+
+Perplexity measures how well the model predics a sequence of tokens without any comparison to the ground truth.  Another common technique is ROUGE (Recall-Oriented Understudy for Gisting Evaluation). ROUGE evaluates text quality by measuring overlaps, such as tokens or n-grams, between the generated text and the reference.
+
+\begin{equation}
+\text{Recall} = \frac{\text{Number of matching tokens}}{\text{Total number of tokens in reference texts}}
+\end{equation}
+
+ROUGE-1 is defined as:
+\begin{equation}
+\text{ROUGE-1} = \frac{\sum_{(g, r) \in \mathcal{D}} \sum_{t \in r} \text{count}(t, g)}{\sum_{(g, r) \in \mathcal{D}} \text{length}(r)}
+\end{equation}
+
+Here, $\mathcal{D}$ is the dataset of (generated text, reference text) pairs, $\text{count}(t, g)$ counts how often a token $t$ from the reference text $r$ appears in the generated text $g$, and the denominator is the total token count across all reference texts.
+\end{definition}
+To understand this calculation, consider a simple example:
+\begin{itemize}
+    \item \textbf{Reference text:} The cat sat on the mat near the door.
+    \item \textbf{Generated text:} The cat sat by the door on the mat.
+\end{itemize}
+
+Using word-level tokenization, we calculate:
+\begin{itemize}
+    \item \textbf{Matching words:} the, cat, sat, on, the, mat, door (7 words)
+    \item \textbf{Total words in the reference text:} 9
+    \item \textbf{ROUGE-1:} \(\frac{7}{9} \approx 0.78\)
+\end{itemize}
+
+\section{Accuracy, Calibration and Robustness}
+
+LLMs have found its way in to a wide variety of applications and have demonstrated capabilities in a diverse set of tasks \cite{liang_holistic_2023}.The extensive use cases make the evaluation of these models challenging. To address this, researchers proposed a holistic evaluation of LLMs. A novel framework on this proposed by \cite{liang_holistic_2023}is called Holistic Evaluation of Language Models (HELM), where the evaluation metrics are grouped into three categories.
+
+\subsubsection{Resource requirements or Efficiency}: Efficiency evaluates language models based on training and inference costs, focusing on energy, carbon, and time usage. Training efficiency considers energy consumption, CO2 emissions, and accelerator details, using standardized formulas to estimate metrics when data is unavailable. Inference efficiency is assessed via runtime metrics: (1) denoised inference runtime (removing performance noise) and (2) idealized inference runtime (using standardized hardware and software). These approaches ensure fairer comparisons across models, highlighting efficiency-capability tradeoffs. Transparency from model creators on training and inference details could further enhance holistic evaluations.
+
+\subsubsection{Alignment which includes fairness, bias, stereotypes, and toxicity }
+Fairness in machine learning evaluates disparate treatment and impacts across social groups, particularly in language technologies. Two key approaches are:
+    \begin{enumerate}
+        \item Counterfactual fairness: Tests model behavior on perturbed examples, altering group-related terms (e.g., race or gender) to measure fairness in text classification or question answering.
+        \item Performance disparities: Measures accuracy differences across demographic groups using metadata, revealing bias when group data distributions differ.
+    \end{enumerate}
+Social bias, distinct from fairness, refers to systematic asymmetries in language model generations. It is studied through:
+
+    \begin{enumerate}
+        \item Demographic representation bias: Measures the uneven frequency of mentions for different demographic groups, identifying over-representation or erasure.
+        \item Stereotypical associations: Evaluates how frequently groups are linked to societal stereotypes, such as occupations.
+    \end{enumerate}
+
+The metrics compare the observed frequencies with uniform distributions or alternative references, providing insight into biases in the language models. Addressing such biases is crucial for the development of inclusive and ethical language technology.
+These methods highlight biases in demographic representation and stereotypical associations, advocating fairness as central to evaluation and social equity.
+\subsubsection{Capability which includes accuracy, fairness, and calibration}   They used accuracy as an umbrella term for the standard accuracy-like metric for each scenario. This refers to the accuracy of the exact match in text classification, the F1 score for word overlap in question answering, the MRR and NDCG scores for information retrieval, and the ROUGE score for summarization. It is important to call out the implicit assumption that accuracy is measured and averaged over test instances. In summary, LLM's accuracy should be evaluated using task-specific metrics rather than a single value, as performance varies by task (e.g., question answering, summarization, document categorization). Metrics such as exact match accuracy, ROUGE, or expert review can provide nuanced assessments ranging from objective to subjective. Furthermore, global accuracy averages can obscure variations in performance across specific inputs, highlighting the need for detailed analysis of task-dependent strengths and weaknesses.The HELM framework defines calibration as the ability of a model to be accurate and to express its uncertainty. This is crucial in high-stakes settings where models inform decisions, allowing for human intervention when uncertainty is high. 
+Calibration is distinct from accuracy; even accurate models can be poorly calibrated if they fail to signal low confidence when likely to be wrong. Enhances safety by reducing errors by signaling uncertainty. Calibration can use white-box approaches (evidence strength) or black-box methods (prompting or sampling). Unlike accuracy, calibration metrics are less standardized.
+
+\subsection{Taxonomy of Evaluation for LLMs}
+
+\begin{enumerate}
+    \item Accuracy: Standard accuracy for each task, exact match accuracy for text classification, F1 score Q\&A, MRR and NDCG for information retrieval, ROUGE for summarization. 
+    \item Calibration and Uncertainty: A model is calibrated if it assigns meaningful probabilities to its predictions. To quantify the calibration, we calculate the expected calibration error (ECE), which measures the difference between the predicted probability of the model and the fraction of times the model is correct.
+    \item Robustness: in real-world models, we encounter complexities that we haven't trained or tested against, and to better capture the performance of these models, we need to extend our evaluation. For this, we measure the model's performance against transformed instances in the worst case. There are two main types of transformations: invariance and equivariance. Invariance: we measure the stability of the model's predictions under small semantic-preserving perturbations.  The goal is to understand the model performance under real use cases like typos, misspellings, capitalizations, etc. Example of this transformation using NL Augmenter is [\href{https://github.com/thedatasense/llm-healthcare/blob/main/Appendix%20E%20%3A%20LLM%20Robustness%20NL_Augmenter.ipynb}{here}]. Equivariance: Here we test how semantics altering perturbations influence model behavior, examples of this are listed in \href{https://raw.githubusercontent.com/allenai/contrast-sets/refs/heads/main/BoolQ/boolq_perturbed.json}{Contrast Set repo}
+    \item Fairness : Counterfactual fairness and Statistical fairness are the two widely used metrics\cite{liang_holistic_2023}.By counterfactual fairness, we refer to model behavior on counterfactual data that is generated by perturbing existing test examples. These perturbations correspond either to social groups involving either (i) the speaker who produced the data or (ii) the subject of the text who is mentioned within it.While perturbation-based methods for counterfactual fairness afford both control and scalability (to arbitrary scenarios), which facilitates evaluation across many scenarios, they are limited. Specifically, since the underlying distribution depends on one group’s data (i.e. the group whose data is being perturbed), they fail to reflect unfairness when the data distributions across groups differ in more complex ways. Consequently, we measure performance disparities for scenarios where test instances are annotated with (pre-existing) group-level metadata by reporting how the accuracy on the subset of the test set corresponding to each group
+\end{enumerate}
+
+
+
+

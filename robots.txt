@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://bineshkumar.me# the base hostname & protocol for your site/sitemap.xml
