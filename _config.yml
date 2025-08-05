@@ -124,7 +124,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Data Sense # blog_name will be displayed in your blog page
-blog_description: I will write about my research, projects, and other things that I find interesting. # blog_description will be displayed in your blog page
+blog_description: Exploring the intersection of AI, healthcare, and data science through research insights and technical deep dives. # blog_description will be displayed in your blog page
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -272,16 +272,16 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code"] # these tags will be displayed on the front page of your blog
-display_categories: ["blockquotes"] # these categories will be displayed on the front page of your blog
+display_tags: ["transformers", "multimodal-ai", "llm-safety", "adversarial-ml", "medical-imaging"] # these tags will be displayed on the front page of your blog
+display_categories: ["research", "deep-learning", "ai-safety", "healthcare-ai"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Sadanandan]
+  first_name: [Binesh, B.]
 
   style: apa
   locale: en
