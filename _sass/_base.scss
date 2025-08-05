@@ -2,6 +2,61 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+// Import modern fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+
+// Typography variables
+:root {
+  --global-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --global-code-font-family: "JetBrains Mono", "Monaco", "Consolas", monospace;
+  --global-font-size: 16px;
+  --global-line-height: 1.6;
+  --global-heading-font-weight: 600;
+}
+
+// Apply typography
+body {
+  font-family: var(--global-font-family);
+  font-size: var(--global-font-size);
+  line-height: var(--global-line-height);
+  letter-spacing: -0.01em;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--global-heading-font-weight);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
 // Typography
 
 p,
@@ -37,10 +92,14 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
 
   &:hover {
-    color: var(--global-theme-color);
-    text-decoration: underline;
+    color: var(--global-hover-color);
+    text-decoration: none;
+    border-bottom-color: var(--global-hover-color);
   }
 
   &:hover:after :not(.nav-item.dropdown) {
@@ -179,24 +238,52 @@ blockquote {
 .profile {
   width: 100%;
 
+  img {
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+  }
+
   .more-info {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-family: var(--global-code-font-family);
+    font-size: 0.875rem;
 
     p {
       display: inline-block;
       margin: 0;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .address {
+    margin-top: 1rem;
+
+    p {
+      margin: 0.25rem 0;
+      font-size: 0.9rem;
+      color: var(--global-text-color-light);
+
+      i {
+        margin-right: 0.5rem;
+        color: var(--global-theme-color);
+      }
     }
   }
 }
 
 .profile.float-right {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
 .profile.float-left {
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -230,8 +317,14 @@ blockquote {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
-  opacity: 0.95;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 0;
+}
+
+html[data-theme="dark"] .navbar {
+  background: rgba(17, 24, 39, 0.8);
 }
 
 .navbar .dropdown-menu {
@@ -269,20 +362,52 @@ blockquote {
 
   .navbar-brand {
     color: var(--global-text-color);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--global-theme-color);
+      transform: translateX(-50%);
+      transition: width 0.3s ease;
+    }
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-theme-color);
+
+      &::after {
+        width: 80%;
+      }
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: 600;
     color: var(--global-theme-color);
+
+    &::after {
+      width: 80%;
+    }
 
     &:hover {
       color: var(--global-hover-color);
@@ -420,16 +545,29 @@ blockquote {
 // Footer
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--global-theme-color), var(--global-accent-color));
+  }
 
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   a {
     color: var(--global-footer-link-color);
+    transition: all 0.2s ease;
 
     &:hover {
       color: var(--global-theme-color);
@@ -443,6 +581,17 @@ footer.sticky-bottom {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--global-theme-color), transparent);
+  }
 }
 
 // CV
@@ -527,13 +676,31 @@ footer.sticky-bottom {
   li {
     border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover {
+      padding-left: 1rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(--global-theme-color);
+      }
+    }
 
     .post-meta {
       color: var(--global-text-color-light);
       font-size: 0.875rem;
-      margin-bottom: 0;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
 
     .post-tags {
@@ -541,6 +708,13 @@ footer.sticky-bottom {
       font-size: 0.875rem;
       padding-top: 0.25rem;
       padding-bottom: 0;
+    }
+
+    h3 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
 
     a {
@@ -559,22 +733,40 @@ footer.sticky-bottom {
 }
 
 .pagination {
+  display: flex;
+  gap: 0.5rem;
+
   .page-item {
     .page-link {
       color: var(--global-text-color);
+      background: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
 
       &:hover {
-        color: $black-color;
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+        background: var(--global-bg-color);
       }
     }
 
     &.active .page-link {
-      color: $white-color;
+      color: white;
       background-color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
 
       &:hover {
-        background-color: var(--global-theme-color);
+        background-color: var(--global-hover-color);
+        border-color: var(--global-hover-color);
       }
+    }
+
+    &.disabled .page-link {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
   }
 }
@@ -814,10 +1006,15 @@ figure.highlight {
 }
 
 pre {
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 6px;
-  padding: 6px 12px;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--global-divider-color);
+  font-family: var(--global-code-font-family);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
 
   pre,
   code {
@@ -831,8 +1028,11 @@ pre {
 code {
   color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 3px;
-  padding: 3px 3px;
+  border-radius: 4px;
+  padding: 0.125rem 0.375rem;
+  font-family: var(--global-code-font-family);
+  font-size: 0.875em;
+  font-weight: 500;
 }
 
 // Transitioning Themes
@@ -929,22 +1129,30 @@ progress::-moz-progress-bar {
   position: relative;
 
   .copy {
-    background: var(--global-card-bg-color);
-    border-color: var(--global-bg-color);
-    border-radius: 0.3rem;
-    border-style: none;
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
     color: var(--global-text-color);
-    font-size: medium;
+    font-size: 0.75rem;
+    font-weight: 500;
     opacity: 0;
     position: absolute;
-    right: 0.2rem;
-    top: 0.2rem;
+    right: 0.75rem;
+    top: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--global-theme-color);
+      color: white;
+      border-color: var(--global-theme-color);
+    }
   }
 
   &:active .copy,
   &:focus .copy,
   &:hover .copy {
-    color: var(--global-hover-color);
     opacity: 1;
   }
 }
@@ -1080,4 +1288,110 @@ nav[data-toggle="toc"] {
 
 #toc-sidebar {
   z-index: 1;
+}
+
+// Smooth Animations
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+// Fade in animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Apply fade in to main content
+.post,
+.publications,
+.projects {
+  animation: fadeIn 0.6s ease-out;
+}
+
+// Stagger animation for cards
+.projects .card,
+.publications .bib {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+// Hover effects
+.social a {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    color: var(--global-theme-color);
+  }
+}
+
+// Tag pills
+.post-tags a,
+.tag-category-list a {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: var(--global-theme-color);
+    color: white;
+    border-color: var(--global-theme-color);
+    transform: scale(1.05);
+  }
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid var(--global-theme-color);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--global-text-color-light);
+  background: var(--global-card-bg-color);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+
+  th {
+    background: var(--global-theme-color);
+    color: white;
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  tr:hover {
+    background: var(--global-card-bg-color);
+  }
 }
