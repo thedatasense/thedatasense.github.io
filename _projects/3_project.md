@@ -3,7 +3,7 @@ layout: page
 title: LIMRA Insurance Lapse Predictor
 description: Understanding and Mitigating Universal Life Insurance Policy Lapses Among Millennials
 img: assets/img/universal-life-insurance.jpg
-importance: 2
+importance: 4
 category: research
 giscus_comments: false
 ---

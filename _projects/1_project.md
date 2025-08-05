@@ -3,7 +3,7 @@ layout: page
 title: Advanced Fault Detection in Medical Devices
 description: Comparative Study of Generative Models for Early Detection of Failures in Medical Devices
 img: assets/img/1.jpg
-importance: 1
+importance: 2
 category: research
 giscus_comments: false
 ---

@@ -3,7 +3,7 @@ layout: page
 title: Data-Driven Modeling and Decision Support for Precision Oncology
 description: A dynamic treatment planning system for Theranostics
 img: assets/img/2_thumbnail.jpg
-importance: 2
+importance: 3
 category: research
 giscus_comments: false
 ---
