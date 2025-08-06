@@ -8,7 +8,8 @@
       "Bash(mv:*)",
       "Bash(npx prettier:*)",
       "Bash(npm install)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "WebFetch(domain:unhsaillab.github.io)"
     ],
     "deny": []
   }

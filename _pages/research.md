@@ -2,119 +2,98 @@
 layout: page
 title: Research
 permalink: /research/
-description: My research focuses on developing robust defense strategies for medical vision-language models
+description: My research focuses on enhancing the robustness of vision-language models in healthcare
 nav: true
 nav_order: 3
 ---
 
-# Robust Defense Strategies for Medical Vision-Language Models
+# Robustness of Vision-Language Models in Healthcare
 
 ## Research Overview
 
-My Ph.D. research at the University of New Haven's Secure and Assured Intelligent Learning Lab (SAIL Lab) focuses on developing comprehensive defense mechanisms against adversarial attacks on medical vision-language models. This work is critical for ensuring the safety and reliability of AI systems in clinical settings, where model failures could have serious consequences for patient care.
+My Ph.D. research at the University of New Haven's Secure and Assured Intelligent Learning Lab (SAIL Lab) focuses on understanding and improving the robustness of Vision-Language Models (VLMs) in healthcare applications. As these models become increasingly integrated into clinical workflows, ensuring their reliability, safety, and resilience against various forms of attacks and failures is paramount.
 
-## Visual Adversarial Attacks
+## VSF-Med: Visual Semantic Fingerprinting for Medical VLMs
 
-My research addresses six specific types of visual attacks that can compromise medical AI systems:
+A key component of my research is the development of VSF-Med, a comprehensive framework for evaluating and enhancing the robustness of medical vision-language models. This work addresses critical vulnerabilities in how VLMs process and interpret medical imagery, particularly in the presence of adversarial perturbations.
 
-- **Gaussian Noise**: Random noise added at varying intensities to disrupt model predictions
-- **Checkerboard Overlays**: Regular grid patterns that can confuse visual processing
-- **Moiré Patterns**: Interference patterns with adjustable frequency that create visual artifacts
-- **Random Arrow Artifacts**: Directional indicators strategically inserted into medical images
-- **Steganographic Information Hiding**: Concealed malicious information embedded within images
-- **LSB-Plane Manipulation**: Least significant bit modifications that are imperceptible to humans but affect models
+### Core Research Areas
 
-## Defense Strategy Framework
+#### 1. Adversarial Robustness
+Understanding how VLMs respond to various forms of visual attacks and developing defense mechanisms:
+- **Attack Taxonomy**: Comprehensive categorization of visual attacks including noise-based, pattern-based, and semantic attacks
+- **Vulnerability Assessment**: Systematic evaluation of model weaknesses across different attack vectors
+- **Defense Strategies**: Multi-layered defense approaches combining detection, preprocessing, and architectural modifications
 
-I am developing and evaluating five complementary defense approaches:
+#### 2. Semantic Understanding
+Investigating how VLMs maintain semantic consistency in medical interpretations:
+- Analysis of feature representations across different layers
+- Cross-modal alignment between visual and textual understanding
+- Semantic drift detection in the presence of perturbations
 
-### 1. Detection-Based Defenses
-ML classifiers that identify attack presence and type, using CNN and Vision Transformer architectures for multi-class classification of attack types.
+#### 3. Multimodal Robustness
+Leveraging multiple data modalities to enhance model reliability:
+- Integration of complementary medical data (imaging, ECG, lab values)
+- Cross-modal verification mechanisms
+- Context-aware defense strategies
 
-### 2. Preprocessing Defenses
-Image filtering techniques targeting specific attack patterns:
-- Wavelet denoising for Gaussian noise
-- Median filtering for checkerboard patterns
-- Frequency domain filtering for Moiré patterns
-- Inpainting techniques for arrow artifacts
-- Bit-plane randomization for steganography/LSB attacks
+## Technical Approach
 
-### 3. Model-Based Defenses
-Architectural modifications including:
-- Adversarial training with all attack types
+### Visual Attack Framework
+My research investigates six primary attack categories that threaten medical VLMs:
+
+- **Noise-based Attacks**: Gaussian noise, salt-and-pepper noise, and other statistical perturbations
+- **Pattern-based Attacks**: Checkerboard overlays, Moiré patterns, and structured artifacts
+- **Semantic Attacks**: Targeted modifications that alter clinical interpretations
+- **Steganographic Attacks**: Hidden information embedding that compromises model integrity
+- **Frequency-domain Attacks**: Manipulations in transformed spaces
+- **Bit-level Attacks**: LSB modifications and quantization-based perturbations
+
+### Defense Methodology
+
+The defense framework operates at multiple levels:
+
+#### Detection Layer
+- Deep learning classifiers for attack identification
+- Anomaly detection in feature spaces
+- Statistical analysis of input characteristics
+
+#### Preprocessing Layer
+- Adaptive filtering based on detected attack types
+- Frequency domain cleaning
+- Spatial domain restoration techniques
+
+#### Model Layer
+- Adversarial training protocols
 - Robust attention mechanisms
-- Feature denoising layers
-- Attack-aware projection layers
+- Defensive distillation approaches
 
-### 4. XAI-Guided Defenses
-Leveraging explainability to identify and mitigate vulnerable regions:
-- Grad-CAM-based suspicious region identification
-- Selective image filtering based on attention patterns
-- Region-based inpainting guided by feature attribution
+#### Interpretation Layer
+- Explainable AI techniques for vulnerability identification
+- Attention-guided defense mechanisms
+- Feature attribution analysis
 
-### 5. Multimodal Context Integration
-Cross-verification using multiple data modalities:
-- ECG-CXR consistency checking
-- Lab value correlation with imaging findings
-- Multimodal anomaly detection
+## Experimental Framework
 
-## Experimental Setup
+### Datasets and Models
+- **Primary Dataset**: Symile-MIMIC multimodal clinical dataset
+- **Target Models**: ChexAgent, LLaVA-Rad, and adapted foundation models
+- **Evaluation Metrics**: Robustness scores, semantic preservation, clinical accuracy
 
-### Dataset
-**Symile-MIMIC**: A multimodal clinical dataset derived from MIMIC-IV and MIMIC-CXR
-- **Modalities**: Chest X-rays (CXRs), electrocardiograms (ECGs), and blood laboratory tests
-- **Size**: 11,622 unique admissions from 9,573 patients
-- **Structure**: Pre-defined train/validation/test splits with no patient overlap
-
-### Target Models
-- **ChexAgent (Stanford AIMI)**: Clinical reasoning agent for chest X-rays with task planning and report generation capabilities
-- **LLaVA-Rad (Microsoft)**: Radiology-specific vision-language model built on CLIP visual encoder and LLaMA language model
-- **Gemma**: Foundation model to be adapted for context-aware multimodal defense (CAMEL architecture)
-
-## Research Timeline & Publications
-
-### Current Progress (Block 1: June - Mid-July 2025)
-- ✅ Implemented all six visual attack types
-- ✅ Created attack parameter space with intensity levels and pattern variations
-- 🔄 Generating attacked image dataset for model evaluation
-- 🔄 Implementing CNN-based attack detector module
-
-### Planned Publications
-
-| Paper | Target Venue | Submission | Focus |
-|-------|--------------|------------|-------|
-| **MedVLM-Shield** | NeurIPS/ICLR/CVPR | Nov 2025 | Framework for detecting and defending against visual attacks |
-| **Clinical Validation** | MIDL | Feb 2026 | Radiologist evaluation of defense effectiveness |
-| **XAI-Med** | Nature Machine Intelligence | Mar 2026 | Visualization and XAI-guided defense mechanisms |
-| **CAMEL** | Nature Digital Medicine | May 2026 | Multimodal context-aware defense system |
-| **SecureVLM-Med** | ML4H Workshop | Jul 2026 | Unified defense framework integration |
-
-## Clinical Validation
-
-A key component of my research involves clinical validation with practicing radiologists to ensure the practical utility of developed defenses:
-
-- **Participants**: 5-8 radiologists
-- **Evaluation**: Defense effectiveness, diagnostic accuracy preservation, XAI explanation utility
-- **Metrics**: Diagnostic accuracy change, defense effectiveness ratings, preference rankings
-
-## Impact & Applications
-
-This research aims to:
-- Ensure the safety and reliability of medical AI systems in clinical deployment
-- Develop standardized defense mechanisms for medical vision-language models
-- Create interpretable security solutions that clinicians can understand and trust
-- Establish benchmarks for evaluating robustness of medical AI systems
+### Key Research Questions
+1. How do different visual perturbations affect the clinical accuracy of medical VLMs?
+2. Can multimodal information provide effective defense against adversarial attacks?
+3. What architectural modifications enhance inherent model robustness?
+4. How can we maintain interpretability while improving security?
 
 ## Collaborations
 
-I work closely with:
-- **Advisor**: Dr. Vahid Behzadan, SAIL Lab, University of New Haven
-- Clinical partners for validation studies
-- Medical AI security researchers
+This research is conducted under the supervision of Dr. Vahid Behzadan at the SAIL Lab, with collaborations across medical AI and security research communities.
 
-## Resources & Code
+## Project Resources
 
-Upon publication, all attack implementations, defense mechanisms, and evaluation frameworks will be made publicly available to support reproducible research and advance the field of secure medical AI.
+- **VSF-Med Project**: [https://unhsaillab.github.io/VSF-Med/](https://unhsaillab.github.io/VSF-Med/)
+- **SAIL Lab**: Secure and Assured Intelligent Learning Lab, University of New Haven
 
 ---
 
