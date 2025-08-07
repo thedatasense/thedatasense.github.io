@@ -97,4 +97,4 @@ This research is conducted under the supervision of Dr. Vahid Behzadan at the SA
 
 ---
 
-*For more details about my research or potential collaborations, please [contact me](mailto:mail@bineshkumar.me).*
+*For more details about my research or potential collaborations, please contact me at: contact(at)bineshkumar(dot)me*

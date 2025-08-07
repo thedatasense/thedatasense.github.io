@@ -2,7 +2,7 @@
   "basics": {
     "name": "Binesh Kumar Sadanandan",
     "label": "Ph.D. Candidate & Research Engineer",
-    "email": "bsada1@unh.newhaven.edu",
+    "email": "contact(at)bineshkumar(dot)me",
     "url": "https://sail-lab.org/rushmore_teams/binesh-kumar/",
     "summary": "Ph.D. candidate at SAIL Lab, University of New Haven, with extensive experience in data science and healthcare technology. Specializing in AI applications for healthcare, particularly precision oncology.",
     "location": {
@@ -49,14 +49,29 @@
   ],
   "skills": [
     {
-      "name": "Data Science",
+      "name": "Data Analysis & Research",
       "level": "Advanced",
-      "keywords": ["Data Analytics", "Machine Learning", "Cloud Technologies"]
+      "keywords": ["Study Design", "Budget Management", "Academic Publishing (ICML)", "Data-to-Insights Pipeline"]
     },
     {
-      "name": "Healthcare Technology",
+      "name": "Programming & Data Tools",
       "level": "Advanced",
-      "keywords": ["Precision Oncology", "Minimally Invasive Therapies"]
+      "keywords": ["Python (pandas, NumPy, SciPy)", "SAS", "SQL", "Power BI", "DAX"]
+    },
+    {
+      "name": "Machine Learning & Medical Imaging",
+      "level": "Advanced",
+      "keywords": ["PyTorch", "TorchXRayVision", "Deep Learning", "Chest X-ray Analysis", "Adversarial Attacks", "Vision-Language Models"]
+    },
+    {
+      "name": "Computer Vision Pipelines",
+      "level": "Advanced",
+      "keywords": ["Annotation Automation", "Surgical Instrument Tracking", "Model Robustness Analysis", "Preprocessing Pipelines"]
+    },
+    {
+      "name": "Systems Integration & Engineering Apps",
+      "level": "Advanced",
+      "keywords": ["ThingWorx Navigate", "Windchill Integration", "Database Schema Design", "Product Data Management", "Inventory Tracking"]
     }
   ],
   "languages": [

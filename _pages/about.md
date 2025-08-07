@@ -13,7 +13,7 @@ profile:
       <p><strong>SAIL Lab</strong></p>
       <p>University of New Haven</p>
       <p>New Haven, CT</p>
-      <p><a href="mailto:mail@bineshkumar.me">mail@bineshkumar.me</a></p>
+      <p>contact(at)bineshkumar(dot)me</p>
       <p><a href="https://www.linkedin.com/in/bineshk">LinkedIn</a> | <a href="https://www.bineshkumar.me">Personal Website</a></p>
     </address>
 
@@ -31,13 +31,35 @@ social: false
 
 <h2>Skills & Expertise</h2>
 
-<h3>Technical Skills</h3>
+<h3>Data Analysis & Research</h3>
 <ul>
-  <li><strong>Machine Learning Techniques:</strong> Regression, clustering, classification, logistic regression, decision tree, random forest, ensemble models</li>
-  <li><strong>Programming Languages:</strong> Java, Python, R</li>
-  <li><strong>Cloud & Big Data Frameworks:</strong> AWS, Snowflake</li>
-  <li><strong>Analytics & Visualization:</strong> PowerBI, Dash/Plotly (I am a big fan!), Shiny</li>
-  <li><strong>PLM & Enterprise Systems:</strong> Windchill, Product Lifecycle Management, Unix</li>
+  <li>Design and run studies, manage budgets, and write papers for venues like ICML</li>
+  <li>Transform raw data into actionable insights through systematic analysis</li>
+</ul>
+
+<h3>Programming & Data Tools</h3>
+<ul>
+  <li><strong>Python:</strong> pandas, NumPy, SciPy for data manipulation and analysis</li>
+  <li><strong>Database & BI:</strong> Build data marts with SQL, craft DAX measures in Power BI</li>
+  <li><strong>Statistical Analysis:</strong> SAS for advanced statistical modeling</li>
+</ul>
+
+<h3>Machine Learning & Medical Imaging</h3>
+<ul>
+  <li>Develop and test deep-learning models using PyTorch and TorchXRayVision on chest X-rays</li>
+  <li>Study adversarial attacks (one-pixel, targeted) and map attention patterns in vision-language models</li>
+</ul>
+
+<h3>Computer Vision Pipelines</h3>
+<ul>
+  <li>Automate annotation workflows and track surgical instruments</li>
+  <li>Analyze model robustness under different preprocessing steps</li>
+</ul>
+
+<h3>Systems Integration & Engineering Apps</h3>
+<ul>
+  <li>Build ThingWorx Navigate apps for inventory and build tracking</li>
+  <li>Integrate applications with Windchill and design custom database schemas for product data management</li>
 </ul>
 
 <h2>Education</h2>
