@@ -148,13 +148,12 @@ Because ultimately, this isn't just an interesting technical puzzle. It's about 
 
 ---
 
-## Publication Details
+## References
 
-**Paper**: VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models  
-**Authors**: Binesh K Sadanandan, Vahid Behzadan  
-**Journal**: arXiv preprint arXiv:2507.00052  
-**Year**: 2025  
-**GitHub**: [Open-source framework available](https://github.com/sail-lab)  
-**Link**: [https://sail-lab.org/vlm-fragility-medical-imaging/](https://sail-lab.org/vlm-fragility-medical-imaging/)
+Sadanandan, B. K., & Behzadan, V. (2025). VSF-Med: A vulnerability scoring framework for medical vision-language models. *arXiv preprint arXiv:2507.00052*.
 
-*Research conducted at the SAIL Lab, University of New Haven*
+Cheng, T. S., Ung, C., Heffernan, C., Harrison, R., & Mackey, T. K. (2024). Assessment of public perceptions and attitudes toward ChatGPT and implications for emerging artificial intelligence chatbots in health care. *JMIR AI*, 3, e50150.
+
+Mayo Clinic Press (2025). AI in healthcare: Current applications and future potential. *Mayo Clinic Health System*. Retrieved from https://www.mayoclinichealthsystem.org/
+
+*Research conducted at the SAIL Lab, University of New Haven. Open-source framework available at [https://github.com/sail-lab](https://github.com/sail-lab)*

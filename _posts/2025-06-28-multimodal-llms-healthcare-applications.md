@@ -2,6 +2,7 @@
 layout: post
 title: "Multimodal Large Language Models in Healthcare: Current Applications and Validation Approaches"
 date: 2025-06-28 14:00:00 -0400
+description: A comprehensive review of multimodal LLMs in healthcare, covering vision-language models for medical imaging, EHR analysis tools, and clinical validation datasets for safe deployment.
 categories: [research, healthcare-ai]
 tags: [multimodal-llms, medical-imaging, ehr-analysis, clinical-ai, validation-datasets]
 author: Binesh K Sadanandan
@@ -147,9 +148,23 @@ Safe clinical use requires:
 
 ## 6. Next Steps and Future Directions
 
-1. **Expand modalities**: add genomics, proteomics, wearable data  
-2. **Real-time AI**: integrate into EHRs for live decision support  
-3. **Personalization**: fine-tune on individual patient histories  
-4. **Unified benchmarks**: cover performance, safety, fairness  
+1. **Expand modalities**: add genomics, proteomics, wearable data
+2. **Real-time AI**: integrate into EHRs for live decision support
+3. **Personalization**: fine-tune on individual patient histories
+4. **Unified benchmarks**: cover performance, safety, fairness
 
 Multimodal LLMs can revolutionize healthcare, but careful validation and deployment are key to patient safety and trust.
+
+## References
+
+Li, C., Wong, C., Zhang, S., Usuyama, N., Liu, H., Yang, J., Naumann, T., Poon, H., & Gao, J. (2023). LLaVA-Med: Training a large language-and-vision assistant for biomedicine in one day. *arXiv preprint arXiv:2306.00890*.
+
+Han, T., Adams, L. C., Papaioannou, J. M., Grundmann, P., Oberhauser, T., Löser, A., Truhn, D., & Bressem, K. K. (2023). MedAlpaca: An open-source collection of medical conversational AI models and training data. *arXiv preprint arXiv:2304.08247*.
+
+Chen, Z., Diao, S., Wang, B., Wang, H., Liu, T., Hu, Z., & Jiang, L. (2024). CheXagent: Towards a foundation model for chest X-ray interpretation. *arXiv preprint arXiv:2401.12208*.
+
+Google (2025). MedGemma: Medical vision-language models. *Google Health AI Developer Foundations*. Retrieved from https://huggingface.co/google/medgemma
+
+Yang, X., Chen, A., PourNejatian, N., Shin, H. C., Smith, K. E., Parisien, C., Compas, C., Martin, C., Costa, A. B., Flores, M. G., Zhang, Y., Magoc, T., Harle, C. A., Lipori, G., Mitchell, D. A., Hogan, W. R., Shenkman, E. A., Bian, J., & Wu, Y. (2022). GatorTron: A large clinical language model to unlock patient information from unstructured electronic health records. *arXiv preprint arXiv:2203.03540*.
+
+Rasul, K., Ashok, A., Williams, A. R., Khorasani, M., Adamopoulos, G., Bhagwatkar, R., Biloš, M., Ghonia, H., Hassen, N. V., Anderson, D., Schneider, J., Nevmyvaka, Y., & Rätsch, G. (2023). Medical time-series data generation using generative adversarial networks. *Proceedings of Machine Learning Research*, 182.

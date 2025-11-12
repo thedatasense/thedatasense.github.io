@@ -2,6 +2,7 @@
 layout: post
 title: "Large Language Models: From Architecture to Evaluation"
 date: 2025-04-18 12:00:00 -0400
+description: A complete guide to building and evaluating large language models, from pretraining and instruction finetuning to multimodal capabilities using LLaMA as a case study.
 categories: [research, deep-learning]
 tags: [llms, multimodal-ai, evaluation-metrics, llama, transformers]
 author: Binesh K Sadanandan
@@ -128,9 +129,21 @@ A broad evaluation groups metrics into three pillars:
 
 ## 4. Best Practices and Takeaways
 
-1. **Pretrain** at large scale, using diverse text.  
-2. **Finetune** on clear, high-quality instruction data.  
-3. **Integrate vision** via cross-attention—LLaMA shows one path.  
-4. **Evaluate broadly**: don’t rely on a single number.  
+1. **Pretrain** at large scale, using diverse text.
+2. **Finetune** on clear, high-quality instruction data.
+3. **Integrate vision** via cross-attention—LLaMA shows one path.
+4. **Evaluate broadly**: don't rely on a single number.
 
 By following this roadmap, you build LLMs that understand text, images, and user needs—while staying efficient, fair, and robust.
+
+## References
+
+Touvron, H., Lavril, T., Izacard, G., Martinet, X., Lachaux, M. A., Lacroix, T., Rozière, B., Goyal, N., Hambro, E., Azhar, F., Rodriguez, A., Joulin, A., Grave, E., & Lample, G. (2023). LLaMA: Open and efficient foundation language models. *arXiv preprint arXiv:2302.13971*.
+
+Dubey, A., Jauhri, A., Pandey, A., Kadian, A., Al-Dahle, A., Letman, A., Mathur, A., Schelten, A., Yang, J., Fan, A., et al. (2024). The Llama 3 herd of models. *arXiv preprint arXiv:2407.21783*.
+
+Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C., Mishkin, P., Zhang, C., Agarwal, S., Slama, K., Ray, A., Schulman, J., Hilton, J., Kelton, F., Miller, L., Simens, M., Askell, A., Welinder, P., Christiano, P. F., Leike, J., & Lowe, R. (2022). Training language models to follow instructions with human feedback. *Advances in Neural Information Processing Systems*, 35, 27730-27744.
+
+Liang, P., Bommasani, R., Lee, T., Tsipras, D., Soylu, D., Yasunaga, M., Zhang, Y., Narayanan, D., Wu, Y., Kumar, A., Newman, B., Yuan, B., Yan, B., Zhang, C., Cosgrove, C., Manning, C. D., Ré, C., Acosta-Navas, D., Hudson, D. A., ... & Koreeda, Y. (2022). Holistic evaluation of language models. *arXiv preprint arXiv:2211.09110*.
+
+Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J. D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T., Child, R., Ramesh, A., Ziegler, D., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin, M., Gray, S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A., Sutskever, I., & Amodei, D. (2020). Language models are few-shot learners. *Advances in Neural Information Processing Systems*, 33, 1877-1901.
