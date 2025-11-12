@@ -27,6 +27,8 @@ social: false
 
 <p>I'm an enthusiastic engineer focused on bridging the gap between data and insights. As a research engineer at <strong>Medtronic Surgical Innovation</strong>, my current focus is to improve the state-of-the-art in minimally invasive therapies by harnessing the data generated from conventional and non-conventional data sources.</p>
 
+<p>My core belief is that machine learning and software-driven systems have the potential to make life-saving medical technology universally accessible. My dissertation research focuses on a critical barrier to this goal: improving the robustness of Visual Large Language Models (LLMs) for safe and reliable clinical deployment.</p>
+
 <p>As a Ph.D. Candidate at <strong>Secure and Assured Intelligent Learning Lab (SAIL Lab)</strong> under the advisement of Dr. Vahid Behzadan at the University of New Haven, my research focuses on developing <strong>Robust Defense Strategies for Medical Vision-Language Models</strong>. I am working on defending against visual adversarial attacks in medical AI systems, developing detection mechanisms, preprocessing defenses, and XAI-guided mitigation strategies to ensure the safety and reliability of vision-language models in clinical settings.</p>
 
 
