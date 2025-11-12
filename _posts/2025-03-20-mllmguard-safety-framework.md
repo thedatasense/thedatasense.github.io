@@ -125,6 +125,6 @@ MLLMGuard provides essential safety infrastructure for MLLM deployment. The fram
 
 Safety isn't optional - it's fundamental to beneficial AI deployment.
 
-## Reference
+## References
 
-Gu, T., Zhou, Z., Huang, K., Liang, D., Wang, Y., Zhao, H., Yao, Y., Qiao, X., Wang, K., Yang, Y., Teng, Y., Qiao, Y., & Wang, Y. (2024). MLLMGuard: A Multi-dimensional Safety Evaluation Suite for Multimodal Large Language Models. *arXiv preprint arXiv:2406.07594*. https://arxiv.org/pdf/2406.07594
+Gu, T., Zhou, Z., Huang, K., Liang, D., Wang, Y., Zhao, H., Yao, Y., Qiao, X., Wang, K., Yang, Y., Teng, Y., Qiao, Y., & Wang, Y. (2024). MLLMGuard: A multi-dimensional safety evaluation suite for multimodal large language models. *arXiv preprint arXiv:2406.07594*.

@@ -2,6 +2,7 @@
 layout: post
 title: "Understanding the Transformer Architecture: A Deep Dive"
 date: 2025-02-15 10:00:00 -0400
+description: A comprehensive guide to transformer architecture, explaining how self-attention, encoders, decoders, and byte pair encoding work together to power modern language models.
 categories: [research, deep-learning]
 tags: [transformers, attention-mechanism, neural-networks, nlp]
 author: Binesh K Sadanandan
@@ -143,6 +144,6 @@ Transformers excel because they:
 
 This architecture powers BERT, GPT, and other breakthrough models in AI.
 
-## Reference
+## References
 
-Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all you need. _Advances in neural information processing systems_, 30.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems*, 30.
