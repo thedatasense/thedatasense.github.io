@@ -12,7 +12,8 @@
       "Bash(rm:*)",
       "WebFetch(domain:unhsaillab.github.io)",
       "WebFetch(domain:github.com)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "WebFetch(domain:sail-lab.org)"
     ],
     "deny": []
   }
