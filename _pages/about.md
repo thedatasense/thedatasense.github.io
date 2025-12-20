@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Senior Principal R&D Engineer (Technical Fellow) | Ph.D. Student - Applied Data Science @ University of New Haven
+subtitle: Senior Principal R&D Engineer (Technical Fellow) | Ph.D. Candidate - Applied Data Science @ University of New Haven
 
 profile:
   align: right
