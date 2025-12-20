@@ -16,7 +16,9 @@
       "WebFetch(domain:sail-lab.org)",
       "Bash(grep:*)",
       "Bash(done)",
-      "Bash(paste - - - -)"
+      "Bash(paste - - - -)",
+      "WebFetch(domain:scholar.google.com)",
+      "WebSearch"
     ],
     "deny": []
   }

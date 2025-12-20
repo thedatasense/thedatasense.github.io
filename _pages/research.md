@@ -116,7 +116,13 @@ Integration of data-driven Physiology-Based PharmacoKinetic (PBPK) modeling with
 
 ## Publications
 
-- Sadanandan, B., Behzadan, V. (2024). "VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models." arXiv preprint [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
+**Sadanandan, B.**, Behzadan, V. (2025). "VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models." *arXiv preprint* [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
+
+**Sadanandan, B.**, Behzadan, V. (2024). "Promise of Data-Driven Modeling and Decision Support for Precision Oncology and Theranostics." *Under Review*
+
+**Sadanandan, B.**, Arghavani Nobar, B., Behzadan, V. (2023). "Analysis of Fault Detection in Medical Devices Leveraging Generative Machine Learning Methods." *Submitted*
+
+[Google Scholar Profile](https://scholar.google.com/citations?user=YgIIscgAAAAJ&hl=en)
 
 ---
 
