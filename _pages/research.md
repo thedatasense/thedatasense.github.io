@@ -8,54 +8,88 @@ nav_order: 2
 
 ## Problem Statement
 
-As healthcare institutions increasingly deploy Vision-Language Models (VLMs) for clinical decision support, these AI systems face critical security and reliability challenges. Subtle adversarial manipulations—imperceptible to human observers—can cause dangerous misdiagnoses or inappropriate treatment recommendations. My dissertation research addresses this fundamental barrier to safe clinical AI deployment.
+Medical Vision-Language Models (VLMs) achieve 85-95% accuracy on benchmarks, yet this high performance masks a critical safety gap: **Phrasing-Sensitive Failures (PSF)**. These models produce contradictory clinical assessments for semantically equivalent questions—answering "Is the heart size normal?" with "Yes" while responding "Is there cardiomegaly?" with "Yes, enlarged" for the same image.
+
+Compounding this, the **Misleading Explanation Effect (MEE)** causes standard faithfulness metrics to paradoxically rate incorrect predictions as more interpretable than correct ones. Together, PSF and MEE undermine the primary mechanisms clinicians use to assess AI reliability, creating dangerous blind spots in clinical deployment.
 
 ---
 
-## Research Focus
+## Dissertation Research
 
-**Robust Defense Strategies for Medical Vision-Language Models**
+**Clinically Robust Vision-Language Models for Diagnostic Applications:**
+*Measuring, Understanding, and Mitigating Phrasing-Sensitive Failures*
 
 Under the advisement of [Dr. Vahid Behzadan](https://sail-lab.org/) at the [Secure and Assured Intelligent Learning Lab (SAIL Lab)](https://unhsaillab.github.io/), University of New Haven.
-
-My research develops comprehensive defense mechanisms for medical VLMs across three key areas:
-
-- **Adversarial Attack Detection**: Identifying visual perturbations and malicious inputs before they compromise model outputs
-- **Preprocessing Defenses**: Developing input sanitization techniques that neutralize adversarial modifications while preserving diagnostic information
-- **XAI-Guided Mitigation**: Leveraging explainable AI methods to understand attack surfaces and design targeted countermeasures
 
 ---
 
 ## Key Research Questions
 
-1. **Vulnerability Assessment**: How susceptible are state-of-the-art medical VLMs to multimodal adversarial attacks, and what unique vulnerability surfaces emerge from the integration of visual and textual modalities?
+1. **Prevalence**: How prevalent is PSF across different pathology types and linguistic phenomena (negation, synonyms, hedging)?
 
-2. **Defense Mechanisms**: What preprocessing and detection strategies can effectively neutralize adversarial perturbations while maintaining diagnostic accuracy in medical imaging contexts?
+2. **Mechanism**: Which layers, attention heads, and fusion pathways are causally responsible for phrasing sensitivity?
 
-3. **Clinical Safety**: How can we establish quantitative security benchmarks that healthcare institutions and regulatory bodies can use to evaluate AI systems before clinical deployment?
+3. **Mitigation**: Can targeted LoRA-based interventions reduce PSF by 50%+ while maintaining diagnostic accuracy?
 
-4. **Interpretability**: How can explainable AI techniques reveal attack patterns and guide the development of more robust medical VLM architectures?
+4. **Deployment**: How should safety thresholds be calibrated for different clinical workflows (triage, critical alerts, reporting)?
 
 ---
 
 ## Research Thrusts
 
-### VSF-Med: Vulnerability Scoring Framework
-A comprehensive framework for evaluating security vulnerabilities in medical AI systems through text-prompt attack templates, imperceptible visual perturbations, and an eight-dimensional risk assessment rubric. Evaluated over 30,000 adversarial variants from 5,000 radiology images.
+### Thrust 1: Measuring PSF and MEE
 
-**Publication**: [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
+Development of the **VSF-Med Benchmark**—2,500+ paraphrased questions across 5 chest X-ray pathologies (cardiomegaly, pleural effusion, pneumothorax, consolidation, atelectasis) with linguistic phenomenon annotations.
 
-### Fault Detection in Medical Devices
-Comparative study of generative models (GAN, VAE) versus classical methods (HMM) for early detection of failures in medical devices, leveraging Data-Driven Digital Twins for predictive maintenance.
+**Novel Metrics:**
+- **Paraphrase Flip Rate (PFR)**: Proportion of semantically equivalent question pairs yielding contradictory answers
+- **Attention Stability Index (ASI)**: Cosine similarity of attention maps across paraphrases
+- **Misleading Explanation Effect Coefficient (MEEC)**: Difference in faithfulness scores between incorrect vs. correct predictions
 
-### Precision Oncology Decision Support
-Integration of data-driven Physiology-Based PharmacoKinetic (PBPK) modeling with Reinforcement Learning for dynamic treatment optimization in cancer therapy.
+**Preliminary Findings**: 18-28% PFR observed in MedGemma and LLaVA-Rad with stable attention (ASI > 0.85), confirming visual-linguistic decoupling.
+
+### Thrust 2: Causal Analysis
+
+Localizing PSF origins through:
+- **Activation patching** to identify layers with high Causal Importance Scores (CIS > 0.5)
+- **Token ablation** to measure necessity/sufficiency of linguistic elements
+- **Decomposed attention analysis** to characterize visual-text fusion stability
+
+**Hypothesis**: PSF arises when paraphrases perturb fusion pathways more than visual evidence, while MEE occurs when attention-output coupling is weak.
+
+### Thrust 3: Robustness Interventions
+
+Targeted **LoRA-based fine-tuning** on causally-identified layers with a combined training objective:
+
+- **Task loss**: Cross-entropy for correctness
+- **Consistency loss**: KL divergence penalizing distributional disagreement across paraphrases
+- **Representation loss**: Cosine alignment of embeddings for equivalent questions
+
+**Target**: 50%+ PFR reduction, MEEC → 0, with <1% additional parameters.
+
+### Thrust 4: Clinical Safety Framework
+
+Risk-stratified deployment protocols including:
+- Real-time paraphrase probing and consistency scoring
+- Abstention triggers for high-PSF cases
+- Uncertainty communication with calibrated confidence and PSF risk indicators
+- Radiologist validation studies (N=10-15)
+
+---
+
+## Datasets & Models
+
+**Imaging Datasets**: MIMIC-CXR (377K images), CheXpert (224K images), VinDr-CXR (18K images)
+
+**Target Models**: MedGemma-4b-it, LLaVA-Rad
+
+**Focus Pathologies**: Cardiomegaly, Pleural Effusion, Pneumothorax, Consolidation/Pneumonia, Atelectasis
 
 ---
 
 ## GitHub Repositories
 
-### Primary Research
+### Dissertation Research
 - [robust-med-mllm-experiments](https://github.com/thedatasense/robust-med-mllm-experiments) — Robustness experiments for medical multimodal LLMs
 - [medical-vlm-intepret](https://github.com/thedatasense/medical-vlm-intepret) — Interpretability tools for medical VLMs
 
@@ -64,9 +98,25 @@ Integration of data-driven Physiology-Based PharmacoKinetic (PBPK) modeling with
 - [CheXagent](https://github.com/thedatasense/CheXagent) — Chest X-ray analysis agent
 - [CARES](https://github.com/thedatasense/CARES) — Clinical AI reasoning and evaluation
 
-### SAIL Lab Projects
-- [rl_for_theranostics](https://github.com/UNHSAILLab/rl_for_theranostics) — Reinforcement learning for precision oncology
-- [Fault-Detection-on-Surgical-Stapler](https://github.com/UNHSAILLab/Fault-Detection-on-Surgical-Stapler-) — Generative methods for medical device fault detection
+---
+
+## Previous Research Projects
+
+### Fault Detection in Medical Devices
+Comparative study of generative models (GAN, VAE) versus classical methods (HMM) for early detection of failures in surgical devices, leveraging Data-Driven Digital Twins for predictive maintenance.
+
+- [Fault-Detection-on-Surgical-Stapler](https://github.com/UNHSAILLab/Fault-Detection-on-Surgical-Stapler-) — SAIL Lab project
+
+### Precision Oncology Decision Support
+Integration of data-driven Physiology-Based PharmacoKinetic (PBPK) modeling with Reinforcement Learning for dynamic treatment optimization in cancer therapy.
+
+- [rl_for_theranostics](https://github.com/UNHSAILLab/rl_for_theranostics) — SAIL Lab project
+
+---
+
+## Publications
+
+- Sadanandan, B., Behzadan, V. (2024). "VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models." arXiv preprint [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
 
 ---
 
@@ -79,4 +129,4 @@ Integration of data-driven Physiology-Based PharmacoKinetic (PBPK) modeling with
 
 ## Contact
 
-For research inquiries or collaboration opportunities, please reach out via [LinkedIn](https://www.linkedin.com/in/bineshk) or email at contact(at)bineshkumar(dot)me.
+For research inquiries or collaboration opportunities: [LinkedIn](https://www.linkedin.com/in/bineshk) | contact(at)bineshkumar(dot)me
