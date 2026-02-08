@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning for Anastomotic Leak Prediction"
 collection: publications
-category: manuscripts
+pub_type: manuscripts
 permalink: /publication/2024-anastomotic-leak
 excerpt: "Application of machine learning techniques for predicting anastomotic leak in surgical procedures."
 date: 2024-05-01

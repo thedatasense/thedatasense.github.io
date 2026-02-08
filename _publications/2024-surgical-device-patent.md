@@ -1,7 +1,7 @@
 ---
 title: "Systems and Methods for Machine Learning Control of a Surgical Device"
 collection: publications
-category: patents
+pub_type: patents
 permalink: /publication/2024-surgical-device-patent
 excerpt: "Patent for machine learning-based control systems for surgical devices."
 date: 2024-01-01

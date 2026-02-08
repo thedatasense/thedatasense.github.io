@@ -1,7 +1,7 @@
 ---
 title: "Data-Driven Decisions"
 collection: publications
-category: manuscripts
+pub_type: manuscripts
 permalink: /publication/2019-dd-decisions-mit
 excerpt: "Research on data-driven decision making methodologies."
 date: 2019-01-01

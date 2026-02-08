@@ -1,7 +1,7 @@
 ---
 title: "Promise of Data-Driven Modeling and Decision Support for Precision Oncology and Theranostics"
 collection: publications
-category: manuscripts
+pub_type: manuscripts
 permalink: /publication/2025-precision-oncology
 excerpt: "Integration of data-driven PBPK modeling with reinforcement learning for dynamic treatment optimization in cancer therapy."
 date: 2025-05-15

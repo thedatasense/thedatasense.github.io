@@ -39,12 +39,12 @@ You can download my full CV here: [Download CV (PDF)](/files/binesh_resume.pdf)
 
 ## Publications
 
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+<ul>{% for post in site.publications reversed %}
+{% include archive-single-cv.html %}
+{% endfor %}</ul>
 
 ## Portfolio
 
-  <ul>{% for post in site.portfolio reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+<ul>{% for post in site.portfolio reversed %}
+{% include archive-single-cv.html %}
+{% endfor %}</ul>

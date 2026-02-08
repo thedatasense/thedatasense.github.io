@@ -1,7 +1,7 @@
 ---
 title: "When Chain-of-Thought Backfires: Evaluating Prompt Sensitivity in Medical Language Models"
 collection: publications
-category: manuscripts
+pub_type: manuscripts
 permalink: /publication/2026-cot-backfires-medical-llm
 excerpt: "Evaluating how chain-of-thought prompting can paradoxically degrade medical language model performance."
 date: 2026-01-01

@@ -1,7 +1,7 @@
 ---
 title: "Comparative Study of Generative Models for Early Detection of Failures in Medical Devices"
 collection: publications
-category: manuscripts
+pub_type: manuscripts
 permalink: /publication/2025-generative-models-medical-devices
 excerpt: "A comparative study of GAN, VAE, and HMM for fault detection in medical devices using data-driven digital twins."
 date: 2025-05-01

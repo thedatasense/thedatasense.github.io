@@ -1,7 +1,7 @@
 ---
 title: "VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models"
 collection: publications
-category: manuscripts
+pub_type: manuscripts
 permalink: /publication/2025-vsf-med
 excerpt: "A comprehensive vulnerability scoring framework for evaluating the robustness of medical vision-language models against adversarial attacks."
 date: 2025-07-01
