@@ -18,7 +18,21 @@
       "Bash(done)",
       "Bash(paste - - - -)",
       "WebFetch(domain:scholar.google.com)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(git -C /Users/bineshkumar/Documents/GitHub/thedatasense.github.io log --oneline -20)",
+      "Bash(wc:*)",
+      "WebFetch(domain:academicpages.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(curl:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git clone:*)",
+      "Bash(bundle install:*)",
+      "Bash(ruby --version:*)",
+      "Bash(rbenv versions:*)",
+      "Bash(git status:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
