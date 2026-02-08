@@ -99,20 +99,6 @@ Risk-stratified deployment protocols including:
 
 ---
 
-## Previous Research Projects
-
-### Fault Detection in Medical Devices
-Comparative study of generative models (GAN, VAE) versus classical methods (HMM) for early detection of failures in surgical devices, leveraging Data-Driven Digital Twins for predictive maintenance.
-
-- [Fault-Detection-on-Surgical-Stapler](https://github.com/UNHSAILLab/Fault-Detection-on-Surgical-Stapler-) --- SAIL Lab project
-
-### Precision Oncology Decision Support
-Integration of data-driven Physiology-Based PharmacoKinetic (PBPK) modeling with Reinforcement Learning for dynamic treatment optimization in cancer therapy.
-
-- [rl_for_theranostics](https://github.com/UNHSAILLab/rl_for_theranostics) --- SAIL Lab project
-
----
-
 ## Publications
 
 **Sadanandan, B.**, Behzadan, V. (2025). "VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models." *arXiv preprint* [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
