@@ -11,5 +11,8 @@ main:
   - title: "Portfolio"
     url: /portfolio/
 
+  - title: "Blog"
+    url: https://thedatasense.com
+
   - title: "CV"
     url: /cv/
