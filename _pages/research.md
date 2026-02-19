@@ -5,7 +5,7 @@ title: "Research"
 author_profile: true
 ---
 
-I study what happens when medical AI models give different answers to the same question, just because you phrase it differently. That's the kind of failure that looks invisible on benchmarks but could matter a lot in a hospital.
+I study what happens when medical visual language models give different answers to the same question, just because you phrase it differently. That's the kind of failure that looks invisible on benchmarks but could matter a lot in a hospital.
 
 I work with [Dr. Vahid Behzadan](https://sail-lab.org/) at the [Secure and Assured Intelligent Learning Lab (SAIL Lab)](https://unhsaillab.github.io/), University of New Haven.
 
@@ -23,11 +23,11 @@ We tested six medical VLMs on 19,748 questions with roughly 92,000 semantically 
 
 The models that flip aren't just confused by language. They're ignoring the image. When we used bounding box annotations from PadChest to measure where models actually look, flip cases showed 41% less attention to pathology regions compared to cases where the model stayed consistent. Some models appeared "stable" only because they achieved 96% text-only agreement, meaning they were getting answers from language patterns alone, not from the X-ray.
 
-## A single feature that controls the decision
+## Breakopen the model to see what's under the hood
 
-This part surprised me. Using GemmaScope 2 Sparse Autoencoders on MedGemma-4B, we found one specific feature, Feature 3818 at layer 17, that acts like a formality gate for clinical queries. When this feature activates strongly (values around 300 to 400), the model tends toward conservative "No" responses. When it stays near zero, the model leans toward "Yes." This single feature accounts for 28 to 42% of the decision margin shift in flip pairs. That's a lot of clinical behavior riding on one internal switch.
+Using GemmaScope 2 Sparse Autoencoders on MedGemma-4B, we found one specific feature, Feature 3818 at layer 17, that acts like a formality gate for clinical queries. When this feature activates strongly (values around 300 to 400), the model tends toward conservative "No" responses. When it stays near zero, the model leans toward "Yes." This single feature accounts for 28 to 42% of the decision margin shift in flip pairs. That's a lot of clinical behavior riding on one internal switch.
 
-## Fixing it (and what surprised us about the fix)
+## Fixing it 
 
 We used targeted Low-Rank Adaptation (LoRA) fine-tuning on layers 15 through 19, the layers our causal analysis identified as most responsible. With just 0.1% of parameters updated, we reduced flip rates by 79.5%.
 
