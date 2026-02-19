@@ -64,9 +64,6 @@ The lesson: consistency alone isn't safety. A model that always gives the same a
 
 [Full list of publications](/publications/) | [Google Scholar](https://scholar.google.com/citations?user=YgIIscgAAAAJ&hl=en)
 
-## People
-
-I'm fortunate to work with [Dr. Vahid Behzadan](https://sail-lab.org/), who directs the SAIL Lab at the University of New Haven. The lab focuses on security and safety in AI systems, which is exactly the lens this research needs.
 
 ## Get in touch
 
