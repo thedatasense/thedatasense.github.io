@@ -43,18 +43,25 @@ The lesson: consistency alone isn't safety. A model that always gives the same a
 | Target Models | MedGemma-4B, MedGemma-27B, LLaVA-Rad, and others |
 | Focus Pathologies | Cardiomegaly, Pleural Effusion, Pneumothorax, Consolidation, Atelectasis |
 
+## Datasets
+
+We've released two datasets on HuggingFace for this line of work. [medical-vqa-robustness-analysis](https://huggingface.co/datasets/saillab/medical-vqa-robustness-analysis) contains the full evaluation suite, and [psf-med](https://huggingface.co/datasets/saillab/psf-med) contains the paraphrase sensitivity benchmark specifically. Both are available for research use.
+
+All experiments are tracked in [Weights & Biases](https://wandb.ai/bineshkumar-saillab-unh/med-vlm-robustness) (gated access, request if needed).
+
 ## Code and repositories
 
 | Repository | What it does |
 |---|---|
-| [robust-med-mllm-experiments](https://github.com/thedatasense/robust-med-mllm-experiments) | Main experiments for medical multimodal Large Language Model (LLM) testing |
+| [medical-vlm-robustness](https://github.com/UNHSAILLab/medical-vlm-robustness) | Primary research codebase (private, access granted on request) |
+| [robust-med-mllm-experiments](https://github.com/thedatasense/robust-med-mllm-experiments) | Public experiments for medical multimodal Large Language Model (LLM) testing |
 | [medical-vlm-intepret](https://github.com/thedatasense/medical-vlm-intepret) | Interpretability tools for medical VLMs |
 | [LLaVA-Med](https://github.com/thedatasense/LLaVA-Med) | Large Language and Vision Assistant for biomedicine |
 | [CheXagent](https://github.com/thedatasense/CheXagent) | Chest X-ray analysis agent |
 
 ## Selected publications
 
-**Sadanandan, B.**, Behzadan, V. (2025). "VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models." *IEEE ISBI 2026*. [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
+**Sadanandan, B.**, Behzadan, V. (2025). "VSF-Med: A Vulnerability Scoring Framework for Medical Vision-Language Models." *IEEE ISBI 2026*. [Project Page](https://unhsaillab.github.io/VSF-Med/) | [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
 
 **Sadanandan, B.**, Behzadan, V. (2026). "When Chain-of-Thought Backfires: Evaluating Prompt Sensitivity in Medical Language Models." *Preprint*.
 

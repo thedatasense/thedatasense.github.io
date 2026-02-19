@@ -84,6 +84,16 @@ The site's typography matches bineshkumar.me/notes:
 | _sass/_themes.scss | Typography and theme variables |
 | _includes/head/custom.html | Custom head snippets (font imports) |
 
+## Research Resources
+
+| Resource | URL | Access |
+|---|---|---|
+| VSF-Med project page | https://unhsaillab.github.io/VSF-Med/ | Public |
+| Primary research repo | https://github.com/UNHSAILLab/medical-vlm-robustness | Private (grant on request) |
+| Medical VQA dataset | https://huggingface.co/datasets/saillab/medical-vqa-robustness-analysis | Public |
+| PSF-Med dataset | https://huggingface.co/datasets/saillab/psf-med | Public |
+| Experiment tracking (W&B) | https://wandb.ai/bineshkumar-saillab-unh/med-vlm-robustness | Gated (request access) |
+
 ## Publication Types
 
 Publications use the `pub_type` field in frontmatter:
