@@ -9,11 +9,11 @@ redirect_from:
 
 ## About Me
 
-I'm an enthusiastic engineer focused on bridging the gap between data and insights. As a research engineer at **Medtronic Surgical Innovation**, my current focus is to improve the state-of-the-art in minimally invasive therapies by harnessing the data generated from conventional and non-conventional data sources.
+I'm an engineer focused on bridging the gap between data and insights. As a research engineer at **Medtronic Surgical Innovation**, my current focus is to improve the state-of-the-art in minimally invasive therapies by harnessing the data generated from conventional and non-conventional data sources.
 
 My core belief is that machine learning and software-driven systems have the potential to make life-saving medical technology universally accessible. My dissertation research focuses on a critical barrier to this goal: improving the robustness of Visual Large Language Models (LLMs) for safe and reliable clinical deployment.
 
-As a Ph.D. Candidate at **Secure and Assured Intelligent Learning Lab (SAIL Lab)** under the advisement of Dr. Vahid Behzadan at the University of New Haven, my research focuses on developing **Robust Defense Strategies for Medical Vision-Language Models**. I am working on defending against visual adversarial attacks in medical AI systems, developing detection mechanisms, preprocessing defenses, and XAI-guided mitigation strategies to ensure the safety and reliability of vision-language models in clinical settings.
+As a Ph.D. Candidate at **Secure and Assured Intelligent Learning Lab (SAIL Lab)** under the advisement of Dr. Vahid Behzadan at the University of New Haven, my research focuses on developing **Robust Defense Strategies for Medical Vision-Language Models**. I am working on defending against natural and visual adversarial attacks in medical AI systems, developing detection mechanisms, preprocessing defenses, and XAI-guided mitigation strategies to ensure the safety and reliability of vision-language models in clinical settings.
 
 ## Education
 
