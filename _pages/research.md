@@ -29,7 +29,7 @@ I have also published a poster-friendly interactive gallery with representative 
   [arXiv:2602.21428](https://arxiv.org/abs/2602.21428)
 
 - **Mechanistically Guided LoRA Improves Paraphrase Consistency in Medical Vision-Language Models**  
-  B. Sadanandan, V. Behzadan. Under review, 2026.  
+  B. Sadanandan, V. Behzadan. *CHIL*, 2026.  
   [arXiv:2603.00148](https://arxiv.org/abs/2603.00148)
 
 - **Consistent but Dangerous: Per-Sample Safety Classification Reveals False Reliability in Medical VLMs**  
