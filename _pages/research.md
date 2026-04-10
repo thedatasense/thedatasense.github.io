@@ -13,7 +13,7 @@ My dissertation investigates robustness, safety, and interpretability failures i
 
 I have also published a poster-friendly interactive gallery with representative PSF-Med failure cases. It shows how semantically equivalent clinical questions can trigger contradictory answers on the same chest X-ray while suppressing raw image filenames and internal example IDs.
 
-<p><a class="btn btn--info btn--large" href="{{ '/psf-med-failures/' | relative_url }}">Open the interactive PSF-Med gallery</a></p>
+<p><a class="btn btn--info btn--large" href="https://bineshkumar.me/psf-med-gallery/">Open the interactive PSF-Med gallery</a></p>
 
 ## Key contributions
 
