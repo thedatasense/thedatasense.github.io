@@ -60,8 +60,8 @@ I have also published a poster-friendly interactive gallery with representative 
 
 ## News
 
-- **Apr 2026**: Presenting PSF-Med poster at SMLM, Yale.
-- **Apr 2026**: VSF-Med poster accepted at IEEE ISBI 2026.
-- **Apr 2026**: Chain-of-Thought paper accepted at 2AI 2026.
-- **Mar 2026**: CVPR MedReasoner Workshop paper accepted.
-- **Feb 2026**: Dissertation first draft complete (6 chapters).
+- **Apr 2026**: PSF-Med poster at SMLM, Yale.
+- **Apr 2026**: Mechanistically Guided LoRA Improves Paraphrase Consistency accepted at CHIL 2026.
+- **Mar 2026**: Chain-of-Thought paper accepted at 2AI 2026.
+- **Mar 2026**: Consistent but Dangerous, CVPR 2026 MedReasoner paper accepted.
+- **Feb 2026**: VSF-Med poster accepted at IEEE ISBI 2026.
