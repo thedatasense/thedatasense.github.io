@@ -41,7 +41,8 @@ I have also published a poster-friendly interactive gallery with representative 
   [arXiv:2507.00052](https://arxiv.org/abs/2507.00052)
 
 - **When Chain-of-Thought Backfires: Evaluating Prompt Sensitivity in Medical Language Models**  
-  B. Sadanandan, V. Behzadan. *2nd International Conference on Applied Artificial Intelligence (2AI)*, 2026.
+  B. Sadanandan, V. Behzadan. *2nd International Conference on Applied Artificial Intelligence (2AI)*, 2026.  
+  [arXiv:2603.25960](https://arxiv.org/abs/2603.25960)
 
 - **Predictive Entropy Links Calibration and Paraphrase Sensitivity in Medical VLMs**  
   B. Sadanandan, V. Behzadan. Under review, 2026.
