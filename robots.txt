@@ -1,15 +1,25 @@
----
-permalink: /robots.txt
----
-User-agent: *
-Disallow:
+# Keep this a plain static file with no YAML front matter. Front matter makes
+# Jekyll apply the site layout and serve robots.txt as an HTML page, which
+# voids every rule below without reporting an error. That already happened once.
 
-Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
+# /phd-thesis/ is a separate GitHub Pages project holding the dissertation
+# companion site. Every page there carries a noindex meta tag, and a search
+# engine acts on that tag only if it can fetch the page and read it. So this
+# file deliberately does not block that path: a blanket Disallow would hide the
+# noindex tag, and the URLs could still get listed, because this site links to
+# them from its navigation.
 
-# The PhD dissertation companion serves an unpublished committee draft.
-# A robots.txt under /phd-thesis/ would never be fetched (crawlers only read
-# this file, at the domain root), so the Disallow has to live here.
-# Remove this block when the final dissertation is deposited and
-# data/thesis-version.json in that repo sets isFinal: true.
+# The one artifact that cannot carry a meta tag is the unpublished dissertation
+# draft PDF. Blocking it here is the only control GitHub Pages offers, since it
+# will not send an X-Robots-Tag header. The rule below is a prefix match, so it
+# keeps working when the date in the filename changes. Remove it once the final
+# dissertation is deposited and data/thesis-version.json in the phd-thesis repo
+# sets isFinal to true.
+
+# The paper PDFs under /phd-thesis/assets/papers/ are all published work and
+# stay crawlable on purpose.
+
 User-agent: *
-Disallow: /phd-thesis/
+Disallow: /phd-thesis/assets/Binesh_Sadanandan_Dissertation
+
+Sitemap: https://bineshkumar.me/sitemap.xml
