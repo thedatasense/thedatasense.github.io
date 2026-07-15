@@ -13,14 +13,19 @@ My dissertation investigates robustness, safety, and interpretability failures i
 
 I have also published a poster-friendly interactive gallery with representative PSF-Med failure cases. It shows how semantically equivalent clinical questions can trigger contradictory answers on the same chest X-ray while suppressing raw image filenames and internal example IDs.
 
-<p><a class="btn btn--info btn--large" href="https://bineshkumar.me/psf-med-gallery/">Open the interactive PSF-Med gallery</a></p>
+<p><a class="btn btn--info btn--large" href="/phd-thesis/">Open the PhD dissertation companion</a> <a class="btn btn--inverse btn--large" href="/phd-thesis/cases/">Open the failure gallery</a></p>
 
 ## Key contributions
 
-- **PSF-Med**: A benchmark of 82,234 paraphrase pairs across six VLMs showing that rephrasing a clinical question can flip a diagnostic answer up to 54% of the time.
-- **Consistency-Safety Paradox**: Demonstrating that the most consistent models are the most text-reliant, creating a false sense of safety (`r = -0.89`).
-- **Mechanistic Diagnosis**: Using Sparse Autoencoders to identify a single "formality gate" feature that mediates 67% of flip failures, enabling targeted `0.1%`-parameter LoRA repair.
-- **Deployment Audits**: Showing that selective-prediction rules raise accuracy to 97% by selecting text-answerable cases, not image-grounded ones, across three architecture families.
+Every number below is traceable to a chapter, a sample size, and a source file in the [dissertation companion](/phd-thesis/).
+
+| Contribution | What I found |
+|---|---|
+| **PSF-Med** | A benchmark of 92,856 audited question-paraphrase pairs, built from 26,850 chest X-ray questions across three countries. On the binary yes/no subset, six medical VLMs flip on 6.4% to 54.7% of pairs. |
+| **Consistency is not safety** | Averaged across ten model-dataset settings, 81% of each model's consistent predictions are image-invariant: the answer does not change when I remove the image. A model can look reliable and still be reading only the question. |
+| **Mechanistic diagnosis** | Sparse Autoencoders point to Feature 3818 at layer 17 as a clinical-query operator gate, and the answer commits at layer 16. This is a candidate account, not a proven circuit: the feature is the largest layer-17 delta in 37 of 76 operator-preserving flips, and ablating it alone restores the original answer in only 6 of them. |
+| **Targeted repair** | A LoRA on layers 15 to 19, touching 0.1% of parameters, cuts the pairwise flip rate by about 59% (8.5% to 3.5% over five seeds) on a patient-disjoint test, with no observed accuracy reduction. It buys that consistency by leaning harder on the question text, so it does not preserve visual grounding. |
+| **Deployment audits** | Offline audit rules admit 33% of PadChest cases at 96.8% accuracy, but they admit the cases a text prior already answers. On the slice where the image is needed, the same model scores 2.9%. No single internal monitor transfers across model families. |
 
 ## Publications
 
@@ -56,7 +61,7 @@ I have also published a poster-friendly interactive gallery with representative 
 
 ## Datasets & Code
 
-- [**PSF-Med Benchmark**](https://github.com/UNHSAILLab/medical-vlm-robustness): 82K paraphrase pairs, six VLMs, and three chest X-ray datasets: MIMIC-CXR, PadChest, and VinDr-CXR.
+- [**PSF-Med Benchmark**](https://github.com/UNHSAILLab/psf-med): 92,856 audited question-paraphrase pairs, six VLMs, and three chest X-ray datasets: MIMIC-CXR, PadChest, and VinDr-CXR. The release carries questions, paraphrases, and audit verdicts, not images.
 - **Models**: Base, targeted LoRA, and full LoRA checkpoints on Hugging Face.
 
 ## News

@@ -5,3 +5,11 @@ User-agent: *
 Disallow:
 
 Sitemap: {{ site.baseurl | prepend: site.url }}/sitemap.xml
+
+# The PhD dissertation companion serves an unpublished committee draft.
+# A robots.txt under /phd-thesis/ would never be fetched (crawlers only read
+# this file, at the domain root), so the Disallow has to live here.
+# Remove this block when the final dissertation is deposited and
+# data/thesis-version.json in that repo sets isFinal: true.
+User-agent: *
+Disallow: /phd-thesis/
