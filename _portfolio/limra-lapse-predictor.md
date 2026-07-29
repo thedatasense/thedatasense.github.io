@@ -7,19 +7,19 @@ header:
   teaser: images/universal-life-insurance.jpg
 ---
 
-This project, conducted as part of a Master's program capstone, delves into the rising trend of policy lapses in universal life insurance, with a focus on the millennial demographic. The study is prompted by the growing concern over millennials' commitment to life insurance policies, a crucial element for financial security. The research aims to unravel the underlying causes of these lapses and identify effective strategies to engage this key demographic.
+For my Master's capstone, I dug into the rising trend of policy lapses in universal life insurance, focusing on millennials. Life insurance is a key part of financial security, and insurers worry that millennials aren't staying committed to their policies. I wanted to find out why these lapses happen and what actually keeps this group engaged.
 
 ![Universal Life Insurance](/images/universal-life-insurance.jpg)
 
 ### Research Scope
 
-The scope includes a thorough analysis using the LIMRA Universal Life Dataset to examine lapse trends, supplemented by predictive modeling to forecast lapse probabilities. Additionally, the project gathered insights directly from millennials through surveys and interviews, focusing on their perceptions and experiences with life insurance. The outcome is strategic recommendations for insurance companies to improve their engagement with the millennial market, aiming to reduce lapse rates and foster long-term customer loyalty.
+I analyzed the LIMRA Universal Life Dataset for lapse trends and built predictive models to forecast lapse probability. I also went straight to the source: surveys and interviews with millennials about how they perceive and experience life insurance. The outcome is a set of recommendations for insurers who want to reduce lapse rates and build long-term customer loyalty with this market.
 
 ![LIMRA Predictor](/images/limra-predictor.gif)
 
 ### Research Hypothesis
 
-The hypothesis suggests that the higher lapse rates in millennials stem from a blend of insufficient understanding of life insurance, a complex purchasing process, and a mismatch between policy offerings and millennials' needs. This project hypothesizes that addressing these factors will significantly reduce lapse rates, enhancing customer retention and stability among millennial policyholders.
+My hypothesis: millennials lapse more because they understand life insurance less, the purchase process is confusing, and the policies on offer don't match their needs. Fix those three things and lapse rates should drop, along with churn among millennial policyholders.
 
 ### Team Members
 

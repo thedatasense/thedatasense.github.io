@@ -1,42 +1,40 @@
 ---
 title: "VSF-Med - Vulnerability Scoring Framework for Medical Vision-Language Models"
-excerpt: "A comprehensive framework for evaluating security vulnerabilities in medical AI systems"
+excerpt: "A framework for scoring security vulnerabilities in medical AI systems"
 collection: portfolio
 permalink: /portfolio/vsf-med/
 header:
   teaser: images/4.jpg
 ---
 
-As medical institutions increasingly adopt Vision-Language Models (VLMs) for clinical decision support, understanding and mitigating their security vulnerabilities becomes critical. This research introduces VSF-Med, a comprehensive vulnerability scoring framework designed specifically for evaluating the robustness of medical AI systems against adversarial attacks.
+As medical institutions adopt Vision-Language Models (VLMs) for clinical decision support, understanding and mitigating their security vulnerabilities becomes urgent. We built VSF-Med, a vulnerability scoring framework for evaluating the robustness of medical AI systems against adversarial attacks.
 
 The framework addresses the unique challenges posed by the integration of visual and textual modalities in medical AI, where subtle manipulations can lead to potentially dangerous misdiagnoses or inappropriate treatment recommendations.
 
 ### Research Scope
 
-VSF-Med provides a systematic approach to evaluate vulnerabilities in medical VLMs through three key components:
+VSF-Med evaluates vulnerabilities in medical VLMs through three components:
 
-- **Text-prompt attack templates**: Designed to test the model's resilience against malicious or misleading textual inputs
-- **Imperceptible visual perturbations**: Subtle modifications to medical images that can deceive AI systems while remaining invisible to human observers
-- **Eight-dimensional risk assessment rubric**: A comprehensive scoring system that evaluates multiple aspects of model vulnerability
+| Component | What it does |
+|---|---|
+| Text-prompt attack templates | Test the model's resilience against malicious or misleading textual inputs |
+| Imperceptible visual perturbations | Subtle modifications to medical images that deceive AI systems while remaining invisible to human observers |
+| Eight-dimensional risk rubric | A scoring system that covers eight distinct aspects of model vulnerability |
 
-Our evaluation synthesized over 30,000 adversarial variants from 5,000 radiology images, providing a thorough assessment of current medical AI systems' security posture.
+We synthesized over 30,000 adversarial variants from 5,000 radiology images to assess the security posture of current medical AI systems.
 
 ### Key Findings
 
-The research revealed varying levels of vulnerability across different state-of-the-art models:
-
-- Models like Llama-3.2-11B-Vision-Instruct and GPT-4o demonstrated different susceptibility patterns to adversarial attacks
-- Certain attack vectors proved more effective in medical contexts compared to general-purpose applications
-- The multimodal nature of medical VLMs introduces unique vulnerability surfaces not present in text-only or vision-only models
+We found that current models fail in different ways. Llama-3.2-11B-Vision-Instruct and GPT-4o showed distinct susceptibility patterns to adversarial attacks, and certain attack vectors proved more effective in medical contexts than in general-purpose applications. The multimodal nature of medical VLMs also introduces vulnerability surfaces that text-only or vision-only models simply don't have.
 
 ### Impact and Applications
 
-This framework enables:
-
-- Healthcare institutions to assess the security risks of deploying AI systems in clinical settings
-- AI developers to identify and address vulnerabilities during the development phase
-- Regulatory bodies to establish security standards for medical AI systems
-- Researchers to benchmark and improve the robustness of medical VLMs
+| Audience | What VSF-Med gives them |
+|---|---|
+| Healthcare institutions | A way to assess the security risks of deploying AI systems in clinical settings |
+| AI developers | A method to find and fix vulnerabilities during development |
+| Regulatory bodies | A basis for security standards for medical AI systems |
+| Researchers | A benchmark for improving the robustness of medical VLMs |
 
 ### Team Members
 

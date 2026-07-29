@@ -3,7 +3,7 @@ locale                   : "en-US"
 title                    : "Binesh K Sadanandan"
 title_separator          : "-"
 name                     : &name "Binesh K Sadanandan"
-description              : &description "AI in Healthcare | Precision Oncology | Reinforcement Learning | Data Science"
+description              : &description "Medical AI safety research: robustness, paraphrase sensitivity, and interpretability of vision-language models for clinical use. Ph.D. candidate, SAIL Lab."
 url                      : "https://bineshkumar.me"
 baseurl                  : ""
 repository               : "thedatasense/thedatasense.github.io"
@@ -13,7 +13,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Binesh K Sadanandan"
   bio              : "Senior Principal R&D Engineer (Technical Fellow) at Medtronic | Ph.D. Candidate in Applied Data Science at University of New Haven"
-  location         : "New Haven, CT"
+  location         : "New York City Metro Area"
   employer         : "Medtronic Surgical Innovation"
   email            : "contact@bineshkumar.me"
   googlescholar    : "https://scholar.google.com/citations?user=YgIIscgAAAAJ"
@@ -47,11 +47,11 @@ google_site_verification :
 bing_site_verification   :
 
 # Social Sharing
-og_image                 :
+og_image                 : "profile.jpg"
 
 # Analytics
 analytics:
-  provider               : "false"
+  provider               : false
 
 # Reading Files
 include:
@@ -63,6 +63,8 @@ exclude:
   - "*.sublime-workspace"
   - .asset-cache
   - .bundle
+  - .claude
+  - CLAUDE.md
   - .github
   - .jekyll-assets-cache
   - .sass-cache

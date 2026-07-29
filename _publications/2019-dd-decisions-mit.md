@@ -9,4 +9,4 @@ venue: "MIT"
 citation: "Sadanandan, B. K. (2019). Data-Driven Decisions. MIT."
 ---
 
-Research on data-driven decision making methodologies, exploring frameworks and approaches for leveraging data analytics in organizational decision processes.
+I explored frameworks and approaches for making organizational decisions with data analytics.

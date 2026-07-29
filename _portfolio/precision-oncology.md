@@ -7,11 +7,11 @@ header:
   teaser: images/2_thumbnail.jpg
 ---
 
-Precision oncology demonstrates the evolution of cancer therapy, emphasizing personalized treatment plans. This approach strategically targets genetic alterations to enhance patient survival with treatments tailored to individual genetic profiles.
+Precision oncology shows where cancer therapy is heading: treatment plans tailored to a patient's own genetic profile, targeting the specific alterations driving their disease.
 
 ![Estimated cancer deaths 2020-2040](/images/graphic-estimated-number-of-deaths-from-2020-to-2040-both-sexes-age-0-85-all-cancers.png)
 
-The scope encompasses a comprehensive analysis of patient-specific genetic patterns and their alignment with an extensive knowledge base of therapeutic and clinical trial data. The research investigates the longitudinal nature of treatment regimens, which adapt to evolving patient health markers and treatment responses.
+We analyze patient-specific genetic patterns and match them against a large knowledge base of therapeutic and clinical trial data. We also look at how treatment regimens evolve over time as patient health markers and treatment responses change.
 
 ### Research Scope
 
@@ -19,7 +19,7 @@ Our research examines advanced pharmacokinetic models and the integration of Rei
 
 ### Research Hypothesis
 
-We hypothesize that integrating data-driven PBPK modeling with RL-based decision support systems can significantly improve the precision and efficacy of cancer treatments. By personalizing therapy regimens and optimizing dosing strategies, we aim to enhance treatment outcomes, reduce toxicities, and offer a more targeted approach to cancer therapy. Our project seeks to validate this hypothesis through rigorous data analysis, model development, and clinical simulations.
+We hypothesize that pairing data-driven PBPK modeling with RL-based decision support improves the precision of cancer treatment. Personalizing therapy regimens and optimizing dosing should improve treatment outcomes and reduce toxicities. We test this with data analysis, model development, and clinical simulations.
 
 ### Team Members
 

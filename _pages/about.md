@@ -7,27 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-## About Me
+I build machine learning systems for medical devices, and I study why medical AI fails in ways standard benchmarks miss.
 
-I'm an engineer focused on bridging the gap between data and insights. As a research engineer at **Medtronic Surgical Innovation**, my current focus is to improve the state-of-the-art in minimally invasive therapies by harnessing the data generated from conventional and non-conventional data sources.
+At **Medtronic Surgical Innovation**, I'm a Senior Principal R&D Engineer and company-wide Technical Fellow. I advise senior leadership on machine learning and data science strategy, and my day-to-day work spans predictive clinical models, generative AI, retrieval-augmented generation (RAG) systems for R&D knowledge search, and cloud data pipelines for clinical evidence generation. Before the machine learning years I spent a long stretch in engineering data management and product lifecycle systems, which is where I learned to care about data integrity and traceability. All told, that's 19 years of engineering.
 
-My core belief is that machine learning and software-driven systems have the potential to make life-saving medical technology universally accessible. My dissertation research focuses on a critical barrier to this goal: improving the robustness of Visual Large Language Models (LLMs) for safe and reliable clinical deployment.
+I'm also a Ph.D. candidate at the [Secure and Assured Intelligent Learning Lab (SAIL Lab)](https://sail-lab.org/) at the University of New Haven, advised by [Dr. Vahid Behzadan](https://vbehzadan.com), with the degree expected in August 2026. My dissertation asks an uncomfortable question: if you reword a clinical question without changing its meaning, why does a medical Vision-Language Model (VLM) change its diagnosis? I built PSF-Med, a benchmark of 92,856 audited question-paraphrase pairs, to measure the problem, then used sparse-autoencoder interpretability to trace where it comes from and targeted fine-tuning to reduce it. The [research page](/research/) has the full story and the numbers.
 
-As a Ph.D. Candidate at **Secure and Assured Intelligent Learning Lab (SAIL Lab)** under the advisement of Dr. Vahid Behzadan at the University of New Haven, my research focuses on developing **Robust Defense Strategies for Medical Vision-Language Models**. I am working on defending against natural and visual adversarial attacks in medical AI systems, developing detection mechanisms, preprocessing defenses, and XAI-guided mitigation strategies to ensure the safety and reliability of vision-language models in clinical settings.
+Along the way I've published papers spanning medical AI safety, precision oncology, and medical device reliability, and co-invented two patents on machine learning for surgical devices. I review for ICLR, MICCAI, Machine Learning for Healthcare (MLHC), and IEEE ICMLA.
 
 ## Education
 
-- **Ph.D. in Engineering and Applied Science - Data Science**
-  University of New Haven (2021 - 2027)
+| Degree | Institution | Years |
+|---|---|---|
+| Ph.D., Engineering and Applied Science (Data Science) | University of New Haven | 2021 - present, expected August 2026 |
+| M.S., Data Science | University of Connecticut School of Business | 2017 - 2019 |
+| B.E., Electronics and Communication | Cochin University of Science and Technology | 2004 - 2008 |
 
-- **Master's degree in Data Science**
-  University of Connecticut School of Business (2017 - 2019)
-
-- **Nanodegree in Deep Learning**
-  Udacity (2017)
-
-- **Advanced Diploma in PLC Controls and Design**
-  Anna University (2008)
-
-- **Bachelor of Engineering in Electronics and Communication**
-  Cochin University of Science and Technology
+I also hold a Deep Learning Nanodegree from Udacity (2017), the Tableau Desktop Specialist certification, and a Certificate in Project Management.
