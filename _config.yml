@@ -65,6 +65,7 @@ exclude:
   - .bundle
   - .claude
   - CLAUDE.md
+  - CLAUDE.local.md
   - .github
   - .jekyll-assets-cache
   - .sass-cache

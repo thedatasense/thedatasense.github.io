@@ -14,7 +14,7 @@ You can download my full CV here: [Download CV (PDF)](/files/binesh_resume.pdf)
 
 ## Summary
 
-I'm a Technical Fellow and senior data science leader with 10+ years building production machine learning, generative AI, and enterprise data platforms in regulated healthcare, on a 19-year engineering foundation. I advise senior leadership on machine learning strategy at Medtronic while finishing a Ph.D. in medical AI safety, mechanistic interpretability, and Large Language Model (LLM) and Vision-Language Model (VLM) evaluation (expected August 2026), with two patents and the publication record listed below.
+I'm a Technical Fellow and senior data science leader with 10+ years building production machine learning, generative AI, and enterprise data platforms in regulated healthcare, on a 19-year engineering foundation. I advise senior leadership on machine learning strategy at Medtronic while finishing a Ph.D. in medical AI safety, mechanistic interpretability, and Large Language Model (LLM) and Vision-Language Model (VLM) evaluation (expected August 2026), with 11 publications and two patents.
 
 ## Experience
 
@@ -27,7 +27,7 @@ I'm a Technical Fellow and senior data science leader with 10+ years building pr
 | Principal R&D Applications Engineer | 2016 - 2021 |
 | Enterprise Solutions Consultant | 2015 - 2016 |
 
-As Technical Fellow, I advise senior leadership on machine learning and data science strategy and mentor engineering teams across the organization. I lead data science and machine learning integration for surgical instruments: predictive models and generative AI for product development and device safety on AWS and Snowflake, retrieval-augmented generation (RAG) pipelines with vector databases for R&D document search, and analysis of MedDRA-coded adverse event data for post-market device safety surveillance. My team's models include multimodal deep learning for early prediction of ICU patient deterioration (Journal of Data Science, 2025) and generative models for early detection of device failures (ICMHI, 2024).
+As Technical Fellow, I advise senior leadership on machine learning and data science strategy and mentor engineering teams across the organization. My primary focus is device data from the Signia powered stapler: predictive models and generative AI for product development and device safety on AWS and Snowflake, retrieval-augmented generation (RAG) pipelines with vector databases for R&D document search, and analysis of MedDRA-coded adverse event data for post-market device safety surveillance. I also built a foundation model for predicting non-small cell lung cancer (NSCLC) recurrence by fine-tuning MedGemma on SEER-Medicare data, and my team's generative models for early detection of device failures were published at ICMHI 2024.
 
 In earlier roles here, I led scientific and clinical evidence strategies for minimally invasive surgical staplers, built data pipelines with Dataiku, Python, Redshift, and Snowflake for clinical evidence generation, delivered Power BI dashboards for stakeholders, and architected Windchill product lifecycle management (PLM) solutions for R&D.
 
