@@ -1,6 +1,32 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url("../fonts/open-sans-latin.woff2") format("woff2");
+}
+
+/* Museo Sans is licensed as a local desktop face. The distributable Open Sans
+   variable font is the public fallback, matching the dissertation companion. */
+@font-face {
+  font-family: "Museo Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Museo Sans 500"), local("MuseoSans-500");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Museo Sans 700"), local("MuseoSans-700");
+}
+
 html {
   /* sticky footer fix */
   position: relative;

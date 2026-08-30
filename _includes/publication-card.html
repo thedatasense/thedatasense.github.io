@@ -1,0 +1,17 @@
+{% include base_path %}
+{% assign publication = include.post %}
+
+<article class="publication-card" itemscope itemtype="https://schema.org/ScholarlyArticle">
+  <div class="publication-card__meta">
+    <span class="publication-card__year">{{ publication.date | date: "%Y" }}</span>
+    {% if publication.venue %}<span>{{ publication.venue }}</span>{% endif %}
+  </div>
+  <h3 itemprop="headline">
+    <a class="publication-card__title" href="{{ base_path }}{{ publication.url }}">{{ publication.title }}</a>
+  </h3>
+  {% if publication.excerpt %}<p class="publication-card__excerpt" itemprop="description">{{ publication.excerpt | markdownify | strip_html }}</p>{% endif %}
+  <div class="publication-card__links">
+    {% if publication.paperurl %}<a href="{{ publication.paperurl }}">Read paper <span aria-hidden="true">↗</span></a>{% endif %}
+    <a href="{{ base_path }}{{ publication.url }}">Details <span aria-hidden="true">→</span></a>
+  </div>
+</article>

@@ -1,20 +1,28 @@
 ---
-layout: archive
+layout: editorial
 title: "CV"
 permalink: /cv/
-author_profile: true
+eyebrow: "Engineering leadership + medical AI research"
+lead: "Nineteen years across enterprise engineering, data platforms, surgical-device intelligence, and trustworthy medical AI."
+author_profile: false
+actions:
+  - label: "Read final dissertation"
+    url: "/phd-thesis/read/"
+    style: "primary"
 redirect_from:
   - /resume
   - /resume/
 ---
 
-{% include base_path %}
-
-You can download my full CV here: [Download CV (PDF)](/files/binesh_resume.pdf)
+<div class="cv-snapshot" aria-label="Career highlights">
+  <div class="cv-snapshot__item"><strong>19 years</strong><span>engineering and technology experience</span></div>
+  <div class="cv-snapshot__item"><strong>12</strong><span>publications and preprints</span></div>
+  <div class="cv-snapshot__item"><strong>2</strong><span>machine-learning patents</span></div>
+</div>
 
 ## Summary
 
-I'm a Technical Fellow and senior data science leader with 10+ years building production machine learning, generative AI, and enterprise data platforms in regulated healthcare, on a 19-year engineering foundation. I advise senior leadership on machine learning strategy at Medtronic while finishing a Ph.D. in medical AI safety, mechanistic interpretability, and Large Language Model (LLM) and Vision-Language Model (VLM) evaluation (expected August 2026), with 11 publications and two patents.
+I'm a Technical Fellow and senior data science leader with 10+ years building production machine learning, generative AI, and enterprise data platforms in regulated healthcare, on a 19-year engineering foundation. I advise senior leadership on machine learning strategy at Medtronic. I successfully defended my Ph.D. dissertation in medical AI safety, mechanistic interpretability, and Large Language Model (LLM) and Vision-Language Model (VLM) evaluation on August 26, 2026, and have 12 publications and preprints and two patents.
 
 ## Experience
 
@@ -31,9 +39,9 @@ As Technical Fellow, I advise senior leadership on machine learning and data sci
 
 In earlier roles here, I led scientific and clinical evidence strategies for minimally invasive surgical staplers, built data pipelines with Dataiku, Python, Redshift, and Snowflake for clinical evidence generation, delivered Power BI dashboards for stakeholders, and architected Windchill product lifecycle management (PLM) solutions for R&D.
 
-**Ph.D. Researcher, SAIL Lab, University of New Haven** (2021 - Present)
+**Ph.D. Researcher, SAIL Lab, University of New Haven** (2021 - 2026)
 
-My dissertation studies paraphrase sensitivity failures in medical vision-language models: clinically equivalent questions that produce contradictory diagnoses. I built the PSF-Med benchmark, applied sparse-autoencoder interpretability to locate causative features, and used mechanistically guided Low-Rank Adaptation (LoRA) interventions to cut diagnosis flip rates. The benchmarks, models, and code are open on [Hugging Face](https://huggingface.co/datasets/saillab/psf-med) and [GitHub](https://github.com/UNHSAILLab/psf-med).
+My dissertation, *Paraphrase Sensitivity in Medical Vision-Language Models: Measurement, Mechanisms, Mitigation, and Deployment Safety*, studies clinically equivalent questions that produce contradictory diagnoses. I built the 92,856-pair PSF-Med benchmark, used sparse-autoencoder and residual-stream analyses to identify candidate internal mechanisms, designed a targeted Low-Rank Adaptation (LoRA) intervention that cut pairwise flips about 59%, and showed why consistency, visual grounding, correctness, and calibration must be audited jointly. The final dissertation, benchmarks, models, and code are available through the [dissertation companion](/phd-thesis/) and on [Hugging Face](https://huggingface.co/datasets/saillab/psf-med) and [GitHub](https://github.com/UNHSAILLab/psf-med).
 
 **Earlier career**
 
@@ -48,7 +56,7 @@ My dissertation studies paraphrase sensitivity failures in medical vision-langua
 
 | Degree | Institution | Years |
 |---|---|---|
-| Ph.D., Engineering and Applied Science (Data Science) | University of New Haven | 2021 - present, expected August 2026 |
+| Ph.D., Engineering and Applied Science (Data Science) | University of New Haven | 2021 - 2026; dissertation successfully defended August 26, 2026 |
 | M.S., Data Science (GPA 3.92) | University of Connecticut School of Business | 2017 - 2019 |
 | B.E., Electronics and Communication | Cochin University of Science and Technology | 2004 - 2008 |
 

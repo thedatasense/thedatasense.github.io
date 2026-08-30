@@ -4,7 +4,7 @@ This is the source code for my personal academic website, built using Jekyll and
 
 ## About
 
-I'm a Senior Principal R&D Engineer (Technical Fellow) at Medtronic Surgical Innovation and a Ph.D. student in Applied Data Science at the University of New Haven. My research focuses on developing robust defense strategies for medical vision-language models.
+I'm a Senior Principal R&D Engineer (Technical Fellow) at Medtronic Surgical Innovation. I successfully defended my Ph.D. dissertation in Engineering and Applied Science (Data Science) at the University of New Haven on August 26, 2026. My research focuses on measuring and mitigating reliability failures in medical vision-language models and evaluating their deployment safety.
 
 ## Website Features
 

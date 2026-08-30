@@ -4,7 +4,7 @@
 {% if site.url %}
   {% assign seo_url = site.url | append: site.baseurl %}
 {% endif %}
-{% assign seo_url = seo_url | default: site.github.url %}
+{% assign seo_url = seo_url | default: "/" %}
 
 {% if page.title %}
   {% assign seo_title = page.title | append: " " | append: site.title_separator | append: " " | append: site.title %}
@@ -20,7 +20,7 @@
 
 <title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ site.title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 
-{% assign seo_description = page.description | default: page.excerpt | default: site.description %}
+{% assign seo_description = page.description | default: page.excerpt | default: page.lead | default: site.description %}
 {% if seo_description %}
   {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
 {% endif %}
@@ -119,7 +119,7 @@
 {% if page.date %}
   <meta property="og:type" content="article">
 {% endif %}
-{% if page.excerpt %}
+{% if page.excerpt or page.lead %}
   <meta property="og:description" name="description" content="{{ seo_description }}">
 {% elsif site.og_description %}
   <meta property="og:description" name="description" content="{{ site.og_description }}">
@@ -132,9 +132,10 @@
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
-      "@type": "Organization",
+      "@type": "Person",
+      "name": {{ site.author.name | default: site.name | jsonify }},
       "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
+      "image": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
     }
   </script>
 {% endif %}

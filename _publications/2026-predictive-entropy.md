@@ -1,15 +1,15 @@
 ---
-title: "Predictive Entropy Links Calibration and Paraphrase Sensitivity in Medical Vision-Language Models"
+title: "Predictive Entropy as a Joint Screen for Error and Paraphrase Instability in Medical Vision-Language Models"
 collection: publications
-pub_type: manuscripts
+pub_type: conferences
 permalink: /publication/2026-predictive-entropy
-excerpt: "Uncertainty and paraphrase sensitivity are connected: the same predictive entropy signal tracks both how well a model is calibrated and how likely it is to flip."
+excerpt: "A single predictive-entropy signal can rank both likely errors and likely paraphrase flips, providing a bounded readiness screen for two failure modes."
 date: 2026-04-01
-venue: "arXiv preprint"
-paperurl: "https://arxiv.org/abs/2604.08941"
-citation: "Sadanandan, B., & Behzadan, V. (2026). Predictive Entropy Links Calibration and Paraphrase Sensitivity in Medical Vision-Language Models. <i>arXiv preprint arXiv:2604.08941</i>."
+venue: "UNSURE Workshop, MICCAI 2026 (poster)"
+paperurl: "/phd-thesis/assets/papers/predictive-entropy.pdf"
+citation: "Sadanandan, B., & Behzadan, V. (2026). Predictive entropy as a joint screen for error and paraphrase instability in medical vision-language models. <i>UNSURE Workshop, MICCAI 2026</i> (poster)."
 ---
 
-[arXiv](https://arxiv.org/abs/2604.08941)
+[Paper](/phd-thesis/assets/papers/predictive-entropy.pdf) | [Code](https://github.com/thedatasense/predictive_entropy_unsure)
 
-We show that predictive entropy connects two problems that are usually studied separately: calibration and paraphrase sensitivity in medical Vision-Language Models (VLMs). Samples where the model is poorly calibrated are also the samples most likely to flip when the question is reworded, which suggests a single uncertainty signal can flag both risks before deployment.
+We test whether a single predictive-entropy signal can flag two failure modes in medical Vision-Language Models (VLMs). On Targeted LoRA over the PadChest flip bank, entropy ranks paraphrase flips at AUROC 0.823 and errors at 0.862, with the flip result replicated across architectures. Softmax entropy, temperature-scaled entropy, and absolute margin are rank-equivalent; confidence ranking still does not certify that a prediction is image-grounded.

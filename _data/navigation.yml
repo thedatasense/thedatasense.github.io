@@ -1,24 +1,16 @@
 main:
-  - title: "About"
-    url: /
+  - title: "Research"
+    url: /research/
+
+  - title: "Work"
+    url: /portfolio/
 
   - title: "Publications"
     url: /publications/
 
-  - title: "Research"
-    url: /research/
-
-  # /phd-thesis/ is served by a separate GitHub Pages project repo on the
-  # same domain; it will 404 in local builds of this repo.
-  - title: "PhD Thesis"
-    url: /phd-thesis/
-
-  - title: "Portfolio"
-    url: /portfolio/
-
   # /notes/ is also served by a separate repo on the same domain.
   - title: "Notes"
-    url: /notes/
+    url: https://bineshkumar.me/notes/
 
   - title: "CV"
     url: /cv/

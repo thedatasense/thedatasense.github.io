@@ -3,7 +3,7 @@ locale                   : "en-US"
 title                    : "Binesh K Sadanandan"
 title_separator          : "-"
 name                     : &name "Binesh K Sadanandan"
-description              : &description "Medical AI safety research: robustness, paraphrase sensitivity, and interpretability of vision-language models for clinical use. Ph.D. candidate, SAIL Lab."
+description              : &description "Medical AI safety research: robustness, paraphrase sensitivity, visual grounding, and deployment safety. Ph.D. dissertation successfully defended August 26, 2026."
 url                      : "https://bineshkumar.me"
 baseurl                  : ""
 repository               : "thedatasense/thedatasense.github.io"
@@ -12,7 +12,7 @@ repository               : "thedatasense/thedatasense.github.io"
 author:
   avatar           : "profile.jpg"
   name             : "Binesh K Sadanandan"
-  bio              : "Senior Principal R&D Engineer (Technical Fellow) at Medtronic | Ph.D. Candidate in Applied Data Science at University of New Haven"
+  bio              : "Senior Principal R&D Engineer (Technical Fellow) at Medtronic | Ph.D. dissertation successfully defended at the University of New Haven"
   location         : "New York City Metro Area"
   employer         : "Medtronic Surgical Innovation"
   email            : "contact@bineshkumar.me"
@@ -134,16 +134,16 @@ defaults:
       type: publications
     values:
       layout: single
-      author_profile: true
-      share: true
+      author_profile: false
+      share: false
   # _portfolio
   - scope:
       path: ""
       type: portfolio
     values:
       layout: single
-      author_profile: true
-      share: true
+      author_profile: false
+      share: false
 
 # Sass/SCSS
 sass:
