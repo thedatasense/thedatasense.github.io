@@ -1,24 +1,16 @@
 ---
-layout: editorial
+layout: archive
 title: "CV"
 permalink: /cv/
-eyebrow: "Engineering leadership + medical AI research"
-lead: "Nineteen years across enterprise engineering, data platforms, surgical-device intelligence, and trustworthy medical AI."
-author_profile: false
-actions:
-  - label: "Read final dissertation"
-    url: "/phd-thesis/read/"
-    style: "primary"
+author_profile: true
 redirect_from:
   - /resume
   - /resume/
 ---
 
-<div class="cv-snapshot" aria-label="Career highlights">
-  <div class="cv-snapshot__item"><strong>19 years</strong><span>engineering and technology experience</span></div>
-  <div class="cv-snapshot__item"><strong>12</strong><span>publications and preprints</span></div>
-  <div class="cv-snapshot__item"><strong>2</strong><span>machine-learning patents</span></div>
-</div>
+{% include base_path %}
+
+My final dissertation and supporting materials are available through the [dissertation companion](/phd-thesis/read/).
 
 ## Summary
 
