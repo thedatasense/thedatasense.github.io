@@ -11,7 +11,7 @@ I'm a Senior Principal R&D Engineer (Technical Fellow) at Medtronic Surgical Inn
 - **About**: Personal information and academic background
 - **Research**: Current research projects and interests
 - **Publications**: Academic papers and research outputs
-- **Blog**: Links to my RobMedLLM Notes
+- **Scratchpad**: Writing on machine learning, medical AI, and research
 - **Repositories**: Featured GitHub projects focusing on medical AI and vision-language models
 - **CV**: Academic curriculum vitae
 
@@ -24,7 +24,7 @@ This website is built using:
 
 ## Local Development
 
-The main site and the sibling `notes` repository share `/assets/css/shared.css`, served by this site. Publish the main site before the notes update. Navigation keeps Research, Publications, Notes, and CV; the site name returns to About. The portfolio and thesis are linked from Research.
+The main site and the sibling `notes` repository share `/assets/css/shared.css`, served by this site. Publish the main site before the notes update. Navigation keeps Research, Scratchpad, and CV; the site name returns to About. Publications, the portfolio, and the thesis are linked from Research. Scratchpad retains the `/notes/` address.
 
 Reading progress, the Goodreads bookshelf, and Strava activity live in `_includes/life.html` on the About page. Notes bookmarks for `#books` and `#running` redirect there. Third-party widgets include direct links when the embeds are unavailable.
 

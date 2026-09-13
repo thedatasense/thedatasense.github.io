@@ -29,6 +29,8 @@ Every number below is traceable to a chapter, a sample size, and a source file i
 
 ## Publications
 
+Browse the [full publication list](/publications/) for papers, preprints, and patents. Selected dissertation publications follow.
+
 - **Trustworthiness Evaluation of Medical Vision-Language Models: A Scoping Review of Robustness, Grounding, Hallucination, and Uncertainty**<br>
   B. Sadanandan, A. Karimi, B. Upadhayay, V. Behzadan. *JMIR AI preprint; manuscript under review*, 2026.<br>
   [JMIR preprint](https://preprints.jmir.org/preprint/102330)

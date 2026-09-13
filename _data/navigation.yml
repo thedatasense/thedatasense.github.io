@@ -2,11 +2,8 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Publications"
-    url: /publications/
-
   # /notes/ is also served by a separate repo on the same domain.
-  - title: "Notes"
+  - title: "Scratchpad"
     url: /notes/
 
   - title: "CV"
