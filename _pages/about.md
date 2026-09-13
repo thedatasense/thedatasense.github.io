@@ -24,3 +24,5 @@ Along the way I've published 12 papers and preprints and co-invented two patents
 | B.E., Electronics and Communication | Cochin University of Science and Technology | 2004 - 2008 |
 
 I also hold a Deep Learning Nanodegree from Udacity (2017), the Tableau Desktop Specialist certification, and a Certificate in Project Management.
+
+{% include life.html %}

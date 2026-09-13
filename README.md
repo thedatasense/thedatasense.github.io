@@ -24,6 +24,10 @@ This website is built using:
 
 ## Local Development
 
+The main site and the sibling `notes` repository share `/assets/css/shared.css`, served by this site. Publish the main site before the notes update. Navigation keeps Research, Publications, Notes, and CV; the site name returns to About. The portfolio and thesis are linked from Research.
+
+Reading progress, the Goodreads bookshelf, and Strava activity live in `_includes/life.html` on the About page. Notes bookmarks for `#books` and `#running` redirect there. Third-party widgets include direct links when the embeds are unavailable.
+
 To run this website locally:
 
 ```bash

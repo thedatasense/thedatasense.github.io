@@ -56,6 +56,8 @@ Every number below is traceable to a chapter, a sample size, and a source file i
 
 ## Datasets & Code
 
+See the [project portfolio](/portfolio/) for applied work and the [dissertation companion](/phd-thesis/) for the thesis and reproducibility materials.
+
 - [**PSF-Med Benchmark**](https://github.com/UNHSAILLab/psf-med): 92,856 final evaluation pairs, six VLMs, and three chest X-ray datasets: MIMIC-CXR, PadChest, and VinDr-CXR. The release carries questions, paraphrases, and audit verdicts, not images.
 - [**PSF-Med Dataset**](https://huggingface.co/datasets/saillab/psf-med): public questions, paraphrases, and audit verdicts.
 - [**Targeted LoRA code and models**](https://github.com/UNHSAILLab/medical-vlm-paraphrase-consistency): training, evaluation, and adapter resources for the mitigation study.
