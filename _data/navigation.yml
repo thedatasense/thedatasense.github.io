@@ -1,4 +1,8 @@
 main:
+  - title: "Home"
+    url: /
+    icon: "fa-solid fa-house"
+
   - title: "Research"
     url: /research/
 
