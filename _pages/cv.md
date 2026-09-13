@@ -10,6 +10,8 @@ redirect_from:
 
 {% include base_path %}
 
+<a href="{{ '/files/binesh_resume.pdf' | relative_url }}" class="btn" download="Binesh_Sadanandan_Resume.pdf">Download CV (PDF)</a>
+
 My final dissertation and supporting materials are available through the [dissertation companion](/phd-thesis/read/).
 
 ## Summary
