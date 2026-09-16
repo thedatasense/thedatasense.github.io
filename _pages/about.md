@@ -1,18 +1,23 @@
 ---
 permalink: /
 title: "About"
+hide_title: true
+page_class: home-page
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-I build machine learning systems for medical devices at Medtronic.<br>
-My research studies the reliability of medical vision-language models.
-
-## My thoughts
-
-We can help create a world we’re glad to live in.
+<div class="home-columns">
+  <div class="home-introduction">
+    <p>I build machine learning systems for medical devices at Medtronic.</p>
+    <p>My research studies the reliability of medical vision-language models.</p>
+    <p>I believe software and AI-driven systems can make healthcare equitable around the world.</p>
+  </div>
+  <section class="home-beliefs" aria-labelledby="beliefs-title">
+    <h2 id="beliefs-title">My beliefs</h2>
+    <p>We can help create a world we’re glad to live in.</p>
 
 <p class="thoughts-hint">Hover or tap to read more.</p>
 <ul class="thoughts-list">
@@ -26,6 +31,8 @@ We can help create a world we’re glad to live in.
   <li><details><summary>Take satisfaction in making progress.</summary><p>Notice what you find rewarding. Cultivate pleasure in understanding something better, finishing useful work, helping a colleague, and changing your mind for a good reason. Let those rewards guide your habits.</p></details></li>
   <li><details><summary>Your current abilities leave room to grow.</summary><p>Some limits are real. Others reflect habits, missing knowledge, or assumptions you can test. Learn the next skill, find good collaborators, and attempt something that matters to you. You don’t need certainty about the whole path to take a useful first step.</p></details></li>
 </ul>
+  </section>
+</div>
 <script src="/assets/js/thoughts.js" defer></script>
 
 {% include life.html %}

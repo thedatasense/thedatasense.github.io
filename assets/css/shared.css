@@ -34,6 +34,21 @@ html { scroll-padding-top: 5rem; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 4px; }
 .page__content { line-height: 1.7; }
 .page__content h2 { font-weight: 600; }
+.home-page { padding-right: 0; }
+.home-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.home-columns > * { min-width: 0; }
+.home-beliefs h2 { margin-top: 0; padding-bottom: 0; border-bottom: 0; }
+.home-introduction { padding-top: .2rem; }
+.research-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.5rem 0 2rem; }
+.page__content .research-action { display: inline-flex; align-items: center; justify-content: center; padding: .8rem 1.15rem; border: 1px solid var(--site-accent); border-radius: 6px; font-weight: 600; line-height: 1.4; text-decoration: none; text-align: center; }
+.page__content .research-action-primary { background: var(--site-accent); color: var(--site-bg); }
+.page__content .research-action-secondary { background: var(--site-bg); color: var(--site-accent); }
+.page__content .research-action:hover { background: var(--site-hover); border-color: var(--site-hover); color: var(--site-bg); text-decoration: none; }
+.page__content .research-action:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 4px; }
+@media (max-width: 760px) {
+  .home-columns { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .research-actions { flex-direction: column; align-items: stretch; }
+}
 .page__footer { border-top: 1px solid var(--site-border); }
 .personal-interests { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; margin-top: 2rem; }
 .personal-interests section { min-width: 0; }

@@ -13,7 +13,10 @@ My dissertation, *Paraphrase Sensitivity in Medical Vision-Language Models: Meas
 
 I have also published a poster-friendly interactive gallery with representative failure cases from PSF-Med, my paraphrase sensitivity benchmark. It shows how semantically equivalent clinical questions can trigger contradictory answers on the same chest X-ray while suppressing raw image filenames and internal example IDs.
 
-<p><a class="btn btn--info btn--large" href="/phd-thesis/read/">Read the final dissertation</a> <a class="btn btn--inverse btn--large" href="/psf-med-failures/">Open the failure gallery</a></p>
+<div class="research-actions">
+  <a class="research-action research-action-primary" href="/psf-med-failures/">Open the PSF-Med failure gallery</a>
+  <a class="research-action research-action-secondary" href="/phd-thesis/read/">Read the final dissertation</a>
+</div>
 
 ## Key contributions
 
