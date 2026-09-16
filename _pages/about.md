@@ -7,22 +7,49 @@ redirect_from:
   - /about.html
 ---
 
-I build machine learning systems for medical devices, and I study why medical AI fails in ways standard benchmarks miss.
+I build machine learning systems for medical devices as a Senior Principal R&D Engineer and Technical Fellow at Medtronic Surgical Innovation.<br>
+My doctoral research examines why medical artificial intelligence (AI) systems fail in ways standard benchmarks miss and how to make them more reliable.
 
-At **Medtronic Surgical Innovation**, I'm a Senior Principal R&D Engineer and company-wide Technical Fellow. I advise senior leadership on machine learning and data science strategy, and my day-to-day work centers on device data from the Signia powered stapler: predictive models, generative AI, retrieval-augmented generation (RAG) systems for R&D knowledge search, and cloud data pipelines for clinical evidence generation. I also fine-tuned MedGemma into a foundation model that predicts non-small cell lung cancer (NSCLC) recurrence from SEER-Medicare data. Before the machine learning years I spent a long stretch in engineering data management and product lifecycle systems, which is where I learned to care about data integrity and traceability. All told, that's 19 years of engineering.
+## My thoughts
 
-I conducted my doctoral research at the [Secure and Assured Intelligent Learning Lab (SAIL Lab)](https://sail-lab.org/) at the University of New Haven, advised by [Dr. Vahid Behzadan](https://vbehzadan.com). I successfully defended my Ph.D. dissertation, *Paraphrase Sensitivity in Medical Vision-Language Models: Measurement, Mechanisms, Mitigation, and Deployment Safety*, on August 26, 2026. The dissertation asks an uncomfortable question: if you reword a clinical question without changing its meaning, why does a medical Vision-Language Model (VLM) change its diagnosis? I built PSF-Med, a benchmark of 92,856 final evaluation pairs, used sparse-autoencoder and residual-stream analyses to identify candidate internal mechanisms, and evaluated targeted fine-tuning and deployment audits. The [research page](/research/) has the full story and evidence, and the [dissertation companion](/phd-thesis/) contains the final document and reproducibility materials.
+We can help create a world we’re glad to live in.
 
-Along the way I've published 12 papers and preprints and co-invented two patents on machine learning for surgical devices. I review for ICLR, MICCAI, Machine Learning for Healthcare (MLHC), and IEEE ICMLA.
+Human beings can discover, build, repair, and improve. We should take that ability seriously. Our ambitions should make life richer and give more people the freedom to shape their own futures.
 
-## Education
+**Knowledge expands what’s possible.**
 
-| Degree | Institution | Years |
-|---|---|---|
-| Ph.D., Engineering and Applied Science (Data Science) | University of New Haven | 2021 - 2026; dissertation successfully defended August 26, 2026 |
-| M.S., Data Science | University of Connecticut School of Business | 2017 - 2019 |
-| B.E., Electronics and Communication | Cochin University of Science and Technology | 2004 - 2008 |
+Better explanations help us solve problems that once seemed fixed. Technology puts some of that knowledge to work. There’s value in both discovering new possibilities and making their benefits available to more people.
 
-I also hold a Deep Learning Nanodegree from Udacity (2017), the Tableau Desktop Specialist certification, and a Certificate in Project Management.
+**Enthusiasm matters.**
+
+Work on problems you care enough about to keep returning to. Excitement helps sustain effort, invites others to join, and makes hard work more enjoyable. Sometimes a larger goal inspires the commitment that a smaller one never could. Give curiosity, play, and rest a place in the work.
+
+**Move quickly enough to learn.**
+
+Bring ideas into contact with reality early. Build something, test a claim, ask for feedback, and revise. Shorten the time between a question and useful evidence. Give careful thought the time it needs, and act when you’ve learned enough to take the next step.
+
+**Worthwhile opportunities remain undiscovered.**
+
+People overlook problems, accept awkward solutions, and inherit assumptions they haven’t tested. Look closely at things you understand and care about. An idea doesn’t need broad agreement before it deserves a fair test. Independent judgment gets stronger when it welcomes criticism.
+
+**There’s always more to learn.**
+
+Treat your beliefs as open to revision, especially the ones you’re proud of. Ask what would change your mind. Welcome people who notice what you’ve missed. Discovering an error gives you a chance to make the next decision better.
+
+**Combine high standards with trust.**
+
+Care about the details. Stay close enough to the work to offer useful judgment. Give people clear ownership, honest feedback, and room to act. Make it easy to question a decision, including yours. Aim for work that’s excellent in ways that matter.
+
+**Build teams where people can do their best work.**
+
+Keep teams small enough for clear communication and large enough for the task. Bring together people whose skills and perspectives complement one another. Value craft, judgment, reliability, and generosity. Help each other improve, and share credit freely.
+
+**Take satisfaction in making progress.**
+
+Notice what you find rewarding. Cultivate pleasure in understanding something better, finishing useful work, helping a colleague, and changing your mind for a good reason. Let those rewards guide your habits.
+
+**Your current abilities leave room to grow.**
+
+Some limits are real. Others reflect habits, missing knowledge, or assumptions you can test. Learn the next skill, find good collaborators, and attempt something that matters to you. You don’t need certainty about the whole path to take a useful first step.
 
 {% include life.html %}
