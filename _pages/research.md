@@ -36,7 +36,7 @@ Browse the [full publication list](/publications/) for papers, preprints, and pa
   [JMIR preprint](https://preprints.jmir.org/preprint/102330)
 
 - **PSF-Med: A Clinician-Audited Benchmark for Paraphrase Sensitivity in Medical Vision-Language Models**<br>
-  B. Sadanandan, V. Behzadan, L. Jayan, A. G. Kurup. *MMFM-BIOMED Workshop, CVPR*, 2026.<br>
+  B. Sadanandan, V. Behzadan, L. Jayan, A. G. Kurup. *MMFM-BIOMED at CVPR*, 2026.<br>
   [arXiv:2602.21428](https://arxiv.org/abs/2602.21428)
 
 - **Mechanistically Guided LoRA Improves Paraphrase Consistency in Medical Vision-Language Models**<br>
@@ -44,15 +44,15 @@ Browse the [full publication list](/publications/) for papers, preprints, and pa
   [arXiv:2603.00148](https://arxiv.org/abs/2603.00148)
 
 - **Consistent but Dangerous: Per-Sample Safety Classification Reveals False Reliability in Medical Vision-Language Models**<br>
-  B. Sadanandan, V. Behzadan. *CVPR MedReasoner Workshop*, 2026.<br>
+  B. Sadanandan, V. Behzadan. *MedReasoner at CVPR*, 2026.<br>
   [arXiv:2603.20985](https://arxiv.org/abs/2603.20985)
 
 - **Predictive Entropy as a Joint Screen for Error and Paraphrase Instability in Medical Vision-Language Models**<br>
-  B. Sadanandan, V. Behzadan. *UNSURE Workshop, MICCAI*, 2026. Poster.<br>
+  B. Sadanandan, V. Behzadan. *UNSURE at MICCAI*, 2026. Poster.<br>
   [Paper](/phd-thesis/assets/papers/predictive-entropy.pdf)
 
 - **Attention Without Grounding: Causal Evaluation of Visual Explanations in Medical VLMs**<br>
-  B. Sadanandan, V. Behzadan. *iMIMIC Workshop, MICCAI*, 2026.<br>
+  B. Sadanandan, V. Behzadan. *iMIMIC at MICCAI*, 2026.<br>
   [arXiv:2607.18577](https://arxiv.org/abs/2607.18577)
 
 
@@ -66,12 +66,12 @@ See the [project portfolio](/portfolio/) for applied work and the [dissertation 
 
 ## News
 
-- **Aug 2026**: Successfully defended the Ph.D. dissertation on August 26; final dissertation published on August 28.
-- **2026**: Predictive Entropy accepted as a poster at the UNSURE Workshop, MICCAI 2026.
-- **2026**: Attention Without Grounding accepted at the iMIMIC Workshop, MICCAI 2026.
-- **2026**: PSF-Med accepted at the MMFM-BIOMED Workshop, CVPR 2026.
+- **September 2026**: Predictive Entropy accepted as a poster at UNSURE at MICCAI 2026.
+- **August 2026**: Successfully defended the Ph.D. dissertation on August 26; final dissertation published on August 28.
+- **August 2026**: Attention Without Grounding accepted at iMIMIC at MICCAI 2026.
+- **June 2026**: PSF-Med accepted at MMFM-BIOMED at CVPR 2026.
 - **Apr 2026**: PSF-Med poster at SMLM, Yale.
 - **Apr 2026**: Mechanistically Guided LoRA Improves Paraphrase Consistency accepted at CHIL 2026.
 - **Mar 2026**: Chain-of-Thought paper accepted at 2AI 2026.
-- **Mar 2026**: Consistent but Dangerous, CVPR 2026 MedReasoner paper accepted.
+- **Mar 2026**: Consistent but Dangerous accepted at MedReasoner at CVPR 2026.
 - **Feb 2026**: VSF-Med poster accepted at IEEE ISBI 2026.
