@@ -39,6 +39,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--site-accent); o
 .personal-interests section { min-width: 0; }
 .personal-interests iframe { max-width: 100%; border: 0; }
 .personal-interests p { font-size: .9em; }
+.thoughts-hint { color: var(--site-muted); font-size: .85em; }
+.thoughts-list { padding-left: 1.25rem; }
+.thoughts-list li { padding-left: .25rem; margin-bottom: .6rem; }
+.thoughts-list summary { display: block; cursor: pointer; font-weight: 600; width: fit-content; }
+.thoughts-list summary::-webkit-details-marker { display: none; }
+.thoughts-list summary:hover { color: var(--site-accent); }
+.thoughts-list summary:focus-visible { outline: 2px solid var(--site-accent); outline-offset: 4px; }
+.thoughts-list details p { margin: .5rem 0 1rem; padding-left: .9rem; border-left: 2px solid var(--site-border); font-size: .95em; }
 .reading-challenge { padding: 1rem; background: #fff; color: #41484c; border: 1px solid var(--site-border); }
 .reading-challenge a { color: #367447; }
 .reading-challenge::after, .bookshelf::after { content: ""; display: table; clear: both; }
