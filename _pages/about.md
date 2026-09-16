@@ -7,16 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-I build machine learning systems for medical devices as a Senior Principal R&D Engineer and Technical Fellow at Medtronic Surgical Innovation.<br>
-My doctoral research examines why medical vision-language models fail in ways standard benchmarks miss and how to make them more reliable.
+I build machine learning systems for medical devices at Medtronic.<br>
+My research studies the reliability of medical vision-language models.
 
 ## My thoughts
 
 We can help create a world we’re glad to live in.
 
-Human beings can discover, build, repair, and improve. We should take that ability seriously. Our ambitions should make life richer and give more people the freedom to shape their own futures.
-
-<p class="thoughts-hint">Hover, tap, or focus on a thought to read more.</p>
+<p class="thoughts-hint">Hover or tap to read more.</p>
 <ul class="thoughts-list">
   <li><details><summary>Knowledge expands what’s possible.</summary><p>Better explanations help us solve problems that once seemed fixed. Technology puts some of that knowledge to work. There’s value in both discovering new possibilities and making their benefits available to more people.</p></details></li>
   <li><details><summary>Enthusiasm matters.</summary><p>Work on problems you care enough about to keep returning to. Excitement helps sustain effort, invites others to join, and makes hard work more enjoyable. Sometimes a larger goal inspires the commitment that a smaller one never could. Give curiosity, play, and rest a place in the work.</p></details></li>
