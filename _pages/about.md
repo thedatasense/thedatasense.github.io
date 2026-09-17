@@ -11,9 +11,9 @@ redirect_from:
 
 <div class="home-columns">
   <div class="home-introduction">
-    <p>I build machine learning systems for medical devices at Medtronic.</p>
-    <p>My research studies the reliability of medical vision-language models.</p>
-    <p>I believe software and AI-driven systems can make healthcare equitable around the world.</p>
+    <p>I do research, experimentation of  machine learning systems for Medical devices development at Medtronic Surgical.</p>
+    <p>My academic research focus on the reliability of medical vision-language models.</p>
+    <p>I believe safe and educated adoption of AI-driven systems can make healthcare equitable around the world.</p>
   </div>
   <section class="home-beliefs" aria-labelledby="beliefs-title">
     <h2 id="beliefs-title">My beliefs</h2>
