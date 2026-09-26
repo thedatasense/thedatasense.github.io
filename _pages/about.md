@@ -21,11 +21,11 @@ redirect_from:
 
 <p class="thoughts-hint">Hover or tap to read more.</p>
 <ul class="thoughts-list">
-  <li><details><summary>Accuracy is only the first test.</summary><p>A medical model can score well on a benchmark and still change its diagnosis when a question is reworded without changing its meaning. I look for the failures that standard tests miss before I trust a score.</p></details></li>
-  <li><details><summary>The lab can move fast. The clinic can’t.</summary><p>In research, I try to shorten the time between a question and useful evidence. I build a small test, run it, and revise. Before a model reaches patients, the work slows down on purpose: stress tests, audits, and review by people who didn’t build it.</p></details></li>
-  <li><details><summary>Trust starts with traceable data.</summary><p>Before machine learning, I spent years in engineering data management. That’s where I learned to care about data integrity and traceability. If I can’t trace a result back to its data, I don’t trust it yet.</p></details></li>
-  <li><details><summary>My proudest ideas need the most checking.</summary><p>The ideas I like most are the ones I’m least likely to question. So I ask what evidence would change my mind, and I treat finding an error as a chance to make the next decision better.</p></details></li>
-  <li><details><summary>Different people catch different mistakes.</summary><p>A clinician, an engineer, and a data scientist often spot problems the others miss. I look for colleagues whose skills differ from mine and make it easy for them to question my decisions. I give clear ownership and honest feedback, and I share credit freely.</p></details></li>
+  <li><details><summary>Bad news is most useful early.</summary><p>Problems are easier to solve while they’re small. I’d rather hear about a risk when there’s still time to act, even if nobody has an answer yet. So I thank people for bad news and make sure nobody gets in trouble for bringing it.</p></details></li>
+  <li><details><summary>Every goal needs one clear owner.</summary><p>When a goal belongs to everyone, it often belongs to no one. I give each goal a single owner, the authority to make decisions about it, and honest feedback along the way. Then I help remove whatever slows them down.</p></details></li>
+  <li><details><summary>I explain why and let people decide how.</summary><p>People make better decisions when they understand what we’re trying to do and why. I explain the goal and the reasons behind it, then let the people doing the work choose the method. Their way is often better than mine.</p></details></li>
+  <li><details><summary>I judge my leadership by how people grow.</summary><p>Projects end, but the skills people build stay with them. I look for work that stretches each person a little past what they’ve done before, and I back them while they learn. When the work goes well, the credit goes to the team.</p></details></li>
+  <li><details><summary>Changing my mind in public builds trust.</summary><p>When I get something wrong, I say so and explain what changed my mind. That shows the team that being wrong is normal and that good evidence counts for more than rank. And I question my favorite ideas the hardest.</p></details></li>
 </ul>
   </section>
 </div>
