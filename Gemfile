@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'github-pages', group: :jekyll_plugins
+# Keep Liquid 4.0.4, which supports the workflow's Ruby 3.2 runtime.
+gem 'github-pages', '= 232', group: :jekyll_plugins
 
 group :jekyll_plugins do
   gem 'jekyll-feed'
