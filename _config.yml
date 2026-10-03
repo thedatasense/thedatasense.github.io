@@ -10,7 +10,8 @@ repository               : "thedatasense/thedatasense.github.io"
 
 # Site Author
 author:
-  avatar           : "profile.jpg"
+  avatar           : "binesh.jpg"
+  avatar_crop      : true
   name             : "Binesh K Sadanandan"
   bio              : "Senior Principal R&D Engineer (Technical Fellow) at Medtronic | Ph.D. dissertation successfully defended at the University of New Haven"
   location         : "New York City Metro Area"
