@@ -17,17 +17,26 @@ redirect_from:
   </div>
   <section class="home-beliefs" aria-labelledby="beliefs-title">
     <h2 id="beliefs-title">My beliefs</h2>
-    <p>We can help create a world we’re glad to live in and leave it better for those who come after us.</p>
-
-<p class="thoughts-hint">Hover or tap to read more.</p>
-<ul class="thoughts-list">
-  <li><details><summary>Build things that are useful to people long term, even if it takes longer.</summary><p>I care about where the work ends up and how long it stays useful. In healthcare, I want what I build to help someone make a better decision or make good care more accessible. That purpose helps me choose which problems are worth spending time on. I never take shortcuts that would hinder the goal itself, even when they would save time.</p></details></li>
-  <li><details><summary>Always stay curious and try to understand why something works.</summary><p>A good result makes me curious about what produced it. I want to understand the assumptions behind it and the conditions under which it fails. Finding a failure can be useful progress. It gives us something specific to investigate and a better question to ask next.</p></details></li>
-  <li><details><summary>Make problems and solutions easy to talk about and be open to being wrong.</summary><p>I want to hear about a concern while there is still time to act, even if we cannot fully explain it yet. Ideas for fixing it should be just as easy to share, even when they are only half formed. I try to thank people for raising them, so they feel free to speak up again. I hold my own thinking to the same standard and ask what would change my mind, especially when I like my answer. When the evidence points elsewhere, I follow it and explain what I got wrong. If I was confident in public, I correct myself there too.</p></details></li>
-  <li><details><summary>Inspire the team with the goal and give clear room to operate.</summary><p>Not everything can be done alone. I want people to understand why the work matters and who is responsible for moving it forward. That responsibility should come with the authority to make decisions. I explain the constraints, offer honest feedback, and trust the person doing the work to choose how to approach it.</p></details></li>
-</ul>
+    <p class="beliefs-lead">We can help create a world we’re glad to live in, and leave it better for those who come after us.</p>
+    <ol class="beliefs-list">
+      <li>
+        <h3>Build for the long term.</h3>
+        <p>Make things that are useful to people, even if it takes longer. Never take shortcuts that undermine the goal.</p>
+      </li>
+      <li>
+        <h3>Stay curious.</h3>
+        <p>Seek to understand why something works.</p>
+      </li>
+      <li>
+        <h3>Make problems and solutions easy to talk about.</h3>
+        <p>Be open to being wrong.</p>
+      </li>
+      <li>
+        <h3>We can’t do everything alone.</h3>
+        <p>Inspire the team with a mission, co-develop a goal, and give people room to act.</p>
+      </li>
+    </ol>
   </section>
 </div>
-<script src="/assets/js/thoughts.js" defer></script>
 
 {% include life.html %}
