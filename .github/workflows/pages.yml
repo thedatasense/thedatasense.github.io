@@ -3,6 +3,9 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: ["master"]
+  schedule:
+    # Rebuild after lunch and late evening (US Eastern) to pick up new Strava runs.
+    - cron: "17 2,18 * * *"
   workflow_dispatch:
 
 permissions:
@@ -20,6 +23,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Fetch latest Strava runs
+        continue-on-error: true
+        run: python3 scripts/fetch_strava.py
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

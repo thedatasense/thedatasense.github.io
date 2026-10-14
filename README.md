@@ -26,7 +26,7 @@ This website is built using:
 
 The main site and the sibling `notes` repository share `/assets/css/shared.css`, served by this site. Publish the main site before the notes update. Navigation keeps Research, Scratchpad, and CV; the site name returns to About. Publications, the portfolio, and the thesis are linked from Research. Scratchpad retains the `/notes/` address.
 
-Reading progress, the Goodreads bookshelf, and Strava activity live in `_includes/life.html` on the About page. Notes bookmarks for `#books` and `#running` redirect there. Third-party widgets include direct links when the embeds are unavailable.
+Reading progress, the Goodreads bookshelf, and recent runs live in `_includes/life.html` on the About page. Notes bookmarks for `#books` and `#running` redirect there. Third-party widgets include direct links when the embeds are unavailable.
 
 To run this website locally:
 
@@ -36,6 +36,27 @@ bundle exec jekyll serve
 ```
 
 Then open your browser to `http://localhost:4000`
+
+### Strava runs
+
+The Running section lists the five latest runs from `_data/strava.json`. The Pages workflow runs `scripts/fetch_strava.py` before every build, and the workflow also runs twice a day on a schedule. The script skips rides and walks, runs under 1 km, and the shorter copy of a run recorded twice within five minutes. Without the secrets below, or if Strava fails, the site keeps the committed file.
+
+To turn on the daily update:
+
+1. Create an API application at https://www.strava.com/settings/api with `localhost` as the Authorization Callback Domain.
+2. Open `https://www.strava.com/oauth/authorize?client_id=CLIENT_ID&response_type=code&redirect_uri=http://localhost&approval_prompt=force&scope=activity:read_all` and approve. The browser lands on a `localhost` page that will not load; copy the `code` value from its address.
+3. Exchange the code for a refresh token:
+
+   ```bash
+   curl -X POST https://www.strava.com/oauth/token \
+     -d client_id=CLIENT_ID -d client_secret=CLIENT_SECRET \
+     -d code=CODE -d grant_type=authorization_code
+   ```
+
+4. Add `STRAVA_CLIENT_ID`, `STRAVA_CLIENT_SECRET`, and the `refresh_token` from that response as `STRAVA_REFRESH_TOKEN` under Settings → Secrets and variables → Actions.
+5. Run "Deploy Jekyll site to GitHub Pages" from the Actions tab to check it.
+
+If a run log warns that Strava issued a new refresh token, repeat steps 2 to 4.
 
 ## Contact
 

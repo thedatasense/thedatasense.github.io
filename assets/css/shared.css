@@ -63,6 +63,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--site-accent); o
 .personal-interests section { min-width: 0; }
 .personal-interests iframe { max-width: 100%; border: 0; }
 .personal-interests p { font-size: .9em; }
+.page__content .run-list { margin: 0 0 .5rem; padding: 0; list-style: none; }
+.page__content .run-list li { margin: 0; padding: .6rem 0; border-bottom: 1px solid var(--site-border); line-height: 1.5; }
+.run-name { display: block; font-weight: 600; }
+.run-meta, .personal-interests .run-updated { color: var(--site-muted); font-size: .85em; }
 .reading-challenge { padding: 1rem; background: #fff; color: #41484c; border: 1px solid var(--site-border); }
 .reading-challenge a { color: #367447; }
 .reading-challenge::after, .bookshelf::after { content: ""; display: table; clear: both; }
