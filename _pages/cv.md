@@ -16,7 +16,7 @@ My final dissertation and supporting materials are available through the [disser
 
 ## Summary
 
-I'm a Technical Fellow and senior data science leader with 10+ years building production machine learning, generative AI, and enterprise data platforms in regulated healthcare, on a 19-year engineering foundation. I advise senior leadership on machine learning strategy at Medtronic. I successfully defended my Ph.D. dissertation in medical AI safety, mechanistic interpretability, and Large Language Model (LLM) and Vision-Language Model (VLM) evaluation on August 26, 2026, and have 12 publications and preprints and two patents.
+I'm a Technical Fellow and senior data science leader with 10+ years building production machine learning, generative artificial intelligence (AI), and enterprise data platforms in regulated healthcare, on a 19-year engineering foundation. I also serve as Technical Lead, AI Enablement, for Medtronic's Surgical Operating Unit and advise senior leadership on machine learning strategy. I completed my Ph.D. in Engineering and Applied Science (Data Science) at the University of New Haven in October 2026. My research focuses on medical AI safety, mechanistic interpretability, and Large Language Model (LLM) and Vision-Language Model (VLM) evaluation. I have 12 publications and preprints and two patents.
 
 ## Experience
 
@@ -24,6 +24,7 @@ I'm a Technical Fellow and senior data science leader with 10+ years building pr
 
 | Role | Years |
 |---|---|
+| Technical Lead, AI Enablement, Surgical Operating Unit | Current |
 | Senior Principal R&D Engineer & Technical Fellow | 2023 - Present |
 | Senior Principal R&D Engineer | 2021 - 2023 |
 | Principal R&D Applications Engineer | 2016 - 2021 |
@@ -33,7 +34,9 @@ As Technical Fellow, I advise senior leadership on machine learning and data sci
 
 In earlier roles here, I led scientific and clinical evidence strategies for minimally invasive surgical staplers, built data pipelines with Dataiku, Python, Redshift, and Snowflake for clinical evidence generation, delivered Power BI dashboards for stakeholders, and architected Windchill product lifecycle management (PLM) solutions for R&D.
 
-**Ph.D. Researcher, SAIL Lab, University of New Haven** (2021 - 2026)
+**Ph.D. Researcher, SAIL Lab, University of New Haven** (2021 - October 2026)
+
+I completed my Ph.D. in October 2026 after successfully defending my dissertation on August 26, 2026.
 
 My dissertation, *Paraphrase Sensitivity in Medical Vision-Language Models: Measurement, Mechanisms, Mitigation, and Deployment Safety*, studies clinically equivalent questions that produce contradictory diagnoses. I built the 92,856-pair PSF-Med benchmark, used sparse-autoencoder and residual-stream analyses to identify candidate internal mechanisms, designed a targeted Low-Rank Adaptation (LoRA) intervention that cut pairwise flips about 59%, and showed why consistency, visual grounding, correctness, and calibration must be audited jointly. The final dissertation, benchmarks, models, and code are available through the [dissertation companion](/phd-thesis/) and on [Hugging Face](https://huggingface.co/datasets/saillab/psf-med) and [GitHub](https://github.com/UNHSAILLab/psf-med).
 
@@ -50,7 +53,7 @@ My dissertation, *Paraphrase Sensitivity in Medical Vision-Language Models: Meas
 
 | Degree | Institution | Years |
 |---|---|---|
-| Ph.D., Engineering and Applied Science (Data Science) | University of New Haven | 2021 - 2026; dissertation successfully defended August 26, 2026 |
+| Ph.D., Engineering and Applied Science (Data Science) | University of New Haven | 2021 - 2026; completed October 2026 |
 | M.S., Data Science (GPA 3.92) | University of Connecticut School of Business | 2017 - 2019 |
 | B.E., Electronics and Communication | Cochin University of Science and Technology | 2004 - 2008 |
 
