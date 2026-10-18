@@ -30,9 +30,11 @@ I'm a Technical Fellow and senior data science leader with 10+ years building pr
 | Principal R&D Applications Engineer | 2016 - 2021 |
 | Enterprise Solutions Consultant | 2015 - 2016 |
 
-As Technical Fellow, I advise senior leadership on machine learning and data science strategy and mentor engineering teams across the organization. My primary focus is device data from the Signia powered stapler: predictive models and generative AI for product development and device safety on AWS and Snowflake, retrieval-augmented generation (RAG) pipelines with vector databases for R&D document search, and analysis of MedDRA-coded adverse event data for post-market device safety surveillance. I also built a foundation model for predicting non-small cell lung cancer (NSCLC) recurrence by fine-tuning MedGemma on SEER-Medicare data, and my team's generative models for early detection of device failures were published at ICMHI 2024.
+As Technical Lead for the Surgical Operating Unit's AI enablement program, I define technical strategy and architecture for governed knowledge retrieval, engineering traceability, and workflow automation. As Technical Fellow, I advise senior leadership on machine learning and data science strategy and mentor engineering teams across the organization. My work with device data from the Signia powered stapler includes predictive models and generative AI for product development and device safety on AWS and Snowflake. I also build retrieval-augmented generation (RAG) pipelines with vector databases for R&D document search. I built a foundation model for predicting non-small cell lung cancer (NSCLC) recurrence by fine-tuning MedGemma on SEER-Medicare data.
 
-In earlier roles here, I led scientific and clinical evidence strategies for minimally invasive surgical staplers, built data pipelines with Dataiku, Python, Redshift, and Snowflake for clinical evidence generation, delivered Power BI dashboards for stakeholders, and architected Windchill product lifecycle management (PLM) solutions for R&D.
+From 2021 to 2023, I led computer vision and machine learning initiatives for surgical stapling within the Operating Room of the Future project, including tissue sensing. I also built data pipelines with Dataiku, Python, Redshift, and Snowflake for clinical evidence generation and R&D decision support, delivered Power BI dashboards for stakeholders, and mentored junior data scientists.
+
+In earlier roles, I architected Windchill product lifecycle management (PLM) solutions for R&D and supported engineering data management and product development processes.
 
 **Ph.D. Researcher, SAIL Lab, University of New Haven** (2021 - October 2026)
 
