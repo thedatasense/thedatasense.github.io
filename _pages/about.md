@@ -12,7 +12,7 @@ redirect_from:
 <div class="home-columns">
   <div class="home-introduction">
     <p>I do research, experimentation of  machine learning systems for Medical devices development at Medtronic Surgical.</p>
-    <p>My academic research focus on the reliability of medical vision-language models.</p>
+    <p>I completed my Ph.D. in Engineering and Applied Science (Data Science) at the University of New Haven in October 2026. My academic research focuses on the reliability of medical vision-language models.</p>
     <p>I believe safe and educated adoption of AI-driven systems can make healthcare equitable around the world.</p>
   </div>
   <section class="home-beliefs" aria-labelledby="beliefs-title">

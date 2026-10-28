@@ -5,7 +5,7 @@ title: "Research"
 author_profile: true
 ---
 
-I conducted this dissertation research in the [Secure and Assured Intelligent Learning Lab (SAIL Lab)](https://sail-lab.org/) at the University of New Haven under the supervision of [Dr. Vahid Behzadan](https://vbehzadan.com). I successfully defended the dissertation on August 26, 2026.
+I conducted this dissertation research in the [Secure and Assured Intelligent Learning Lab (SAIL Lab)](https://sail-lab.org/) at the University of New Haven under the supervision of [Dr. Vahid Behzadan](https://vbehzadan.com). I completed my Ph.D. in Engineering and Applied Science (Data Science) in October 2026 after successfully defending the dissertation on August 26, 2026.
 
 My dissertation, *Paraphrase Sensitivity in Medical Vision-Language Models: Measurement, Mechanisms, Mitigation, and Deployment Safety*, investigates robustness, safety, and interpretability failures in medical Vision-Language Models (VLMs). Its central finding is that a low paraphrase-flip rate is not sufficient evidence of reliable visual reasoning: models that appear reliable by standard metrics may be exploiting text shortcuts rather than analyzing the medical image.
 
@@ -69,6 +69,7 @@ See the [project portfolio](/portfolio/) for applied work and the [dissertation 
 
 ## News
 
+- **October 2026**: Completed my Ph.D. in Engineering and Applied Science (Data Science) at the University of New Haven.
 - **September 2026**: Predictive Entropy accepted as a poster at UNSURE at MICCAI 2026.
 - **August 2026**: Successfully defended the Ph.D. dissertation on August 26; final dissertation published on August 28.
 - **August 2026**: Attention Without Grounding accepted at iMIMIC at MICCAI 2026.
